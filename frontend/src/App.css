@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(180deg, rgb(240, 210, 230) 0% rgb(50, 112, 118) 100%);
+}
+
+body {
+  overflow: hidden;
+}
