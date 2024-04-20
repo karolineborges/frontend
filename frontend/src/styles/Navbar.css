@@ -5,6 +5,7 @@
     background-color: #8bee98;
     color: #fff;
     padding: 1rem;
+    height: 4vw;
 }
 
 .logo {
@@ -19,7 +20,7 @@
     list-style-type: none;
     display: flex;
     justify-content: center;
-    margin-right: 20rem;
+    margin-right: 11.5rem;
 }
 
 .navbar-links li {
@@ -43,5 +44,14 @@
 .navbar-links li a:hover {
     color: #111;
     transition:0.5s
+}
+
+.login{
+    list-style-type: none;  
+    text-decoration: none;
+}
+
+.login a{
+    text-decoration: none;
 }
 
