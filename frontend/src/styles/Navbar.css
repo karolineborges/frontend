@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #8bee98;
-    color: #fff;
+    background-color: #adf0b6;
+    color: #7B3F00;
     padding: 1rem;
     height: 4vw;
 }
@@ -30,20 +30,18 @@
 
 .navbar-links li a {
     text-decoration: none;
-    color: #fff;
+    color: #7B3F00;
     padding: 1rem;
-    padding-bottom: 20px;
+    padding-bottom: 1.2rem;
     }
 
-.navbar-links li:hover {
-    border-color: #111;
-    border-radius: 5rem;
-    transition: 0.5s
-}
+
 
 .navbar-links li a:hover {
-    color: #111;
-    transition:0.5s
+    color: #fff;
+    border-radius: 5rem;
+    background-color: green;
+    transition: 0.5s
 }
 
 .login{
