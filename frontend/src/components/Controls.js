@@ -33,6 +33,11 @@ function Controls () {
 
             imgRefs.current.slice(0, 5).forEach((item, i) => {
                 item.classList.add(`card-item-${i + 1}`)
+                let index = i + 1;
+                console.log(index)
+                if(index == 3){
+                    item.classList.add('expanded')
+                }
             });
         };
 

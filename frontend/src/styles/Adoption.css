@@ -48,6 +48,7 @@
     left: 50%;
     transform: translateX(-50%);
     box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35);
+    cursor: pointer;
 }
 
 .card-item-4 {
@@ -63,7 +64,7 @@
 
 .cards-controls{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 25px 0;
     height: 100px;
 }
@@ -133,7 +134,6 @@
     padding: 0;
     position: absolute;
     width: 100%;
-
 }
 
 .cards nav li {
@@ -142,10 +142,34 @@
     height: 10px;
     margin: 0 16px;
     width: 10px;
-
 }
 
 .cards-nav li.card-item-selected{
     background: #555;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;    
+}
+
+.expanded {
+  width: 120%;
+  height: 120%;
+  position: absolute; /* Position fixed to cover the entire viewport */
+  top: 0vw; /* Align to the top of the viewport */
+  left: 31.5vw; /* Align to the left of the viewport */
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+  object-fit: cover; /* Maintain aspect ratio */
+
+}

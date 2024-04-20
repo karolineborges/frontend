@@ -7,16 +7,15 @@ import Controls from '../components/Controls.js';
 function Adoption() {
     return (
         <div className="adoption">
-            <p>lorem lorem lorem lorem</p>
+            <p>Conheça os pets que estão em busca de um novo lar!</p>
             <div className="cards">
                 <div className="cards-container">
-                    <Images></Images>
+                    <Images/>
                </div>
                 <div className="cards-controls">
-                    <Controls />
+                    <Controls/>
                 </div>
             </div>
-
         </div>
     );
 }

@@ -22,14 +22,17 @@ function Navbar() {
                 <li className={page === 'about' ? 'active' : ''}>
                     <Link to="/about" onClick={() => setPage('about')}>Doação</Link>
                 </li>
-                {true ? <li className={page === 'adm' ? 'active' : ''}>
+                {sessionStorage.getItem("ADM") ? <li className={page === 'adm' ? 'active' : ''}>
                     <Link to="/adm" onClick={() => setPage('adm')}>Administração</Link>
                 </li> : ""
                 }
             </ul>
-            <div className='login'>
+            {sessionStorage.getItem("ADM") ? <div className='login'>
+                Olá, ADM
+            </div> : <div className='login'>
                 <Link to="/login" >Login</Link>
-            </div>
+            </div> 
+            }
         </nav>
     );
 };
