@@ -1,18 +1,28 @@
-import React, { useState } from 'react';
-import '../styles/Navbar.css'; // Import CSS file for styling (optional)
-import logo from "../images/img.png"
-import {Link} from "react-router-dom"
+import { useState } from 'react';
+import '../styles/Navbar.css';
+import logo from "../images/img.png";
+import {Link} from "react-router-dom";
+import ListMenu from './SVG';
 
 function Navbar() {
-    // State to manage the active state of navbar items
     const [page, setPage] = useState('home');
+    const [showMenu, setShowMenu] = useState(false)
+
+    const handleShowMenu = () => {
+        setShowMenu(!showMenu)
+    }
 
     return (
         <nav className="navbar">
+            <div className="container">
             <div className="logo">
-                <img  src={logo}/>
+                  <img src={logo} />
             </div>
-            <ul className="navbar-links">
+            <div className="menu" onClick={handleShowMenu}>
+                <ListMenu></ListMenu>
+            </div>
+            <div className={`navbar-links  ${showMenu && 'active'}`}>
+            <ul>
                 <li className={page === 'home' ? 'active' : ''}>
                     <Link to="/" onClick={() => setPage('home')}>Home</Link>
                 </li>
@@ -27,13 +37,15 @@ function Navbar() {
                 </li> : ""
                 }
             </ul>
-            {sessionStorage.getItem("ADM") ? <div className='login'>
-                Olá, ADM
-            </div> : <div className='login'>
+        </div>
+        {
+            sessionStorage.getItem("ADM") ? "" : 
+            <div className='login'>
                 <Link to="/login" >Login</Link>
-            </div> 
-            }
-        </nav>
+            </div>
+        }
+      </div>
+    </nav>
     );
 };
 
