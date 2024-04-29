@@ -1,5 +1,10 @@
+p{
+    background-color: rgb(248, 240, 240);
+}
+
 .cards{
     width: 100%;
+    background-color: rgb(248, 240, 240);
 }
 
 .cards-container{
@@ -7,9 +12,8 @@
     display: flex;
     height: 320px;
     margin: 0 auto;
-    max-width: 1000px;
-    position: relative;
-}
+    max-width: 800px;
+    background-color: rgb(248, 240, 240);}
 
 .card-item{
     height: 200px;
@@ -65,8 +69,8 @@
 .cards-controls{
     display: flex;
     justify-content: space-between;
-    margin: 25px 0;
-    height: 100px;
+    margin: 0px 0;
+    height: 6vh;
 }
 
 .cards-controls button {
@@ -74,8 +78,7 @@
     border: 0;
     cursor: pointer;
     font-size: 30px;
-    margin: 0 50px;
-    padding: 0 12px;
+    margin: 0 3rem;
     text-transform: capitalize;
 }
 
@@ -103,10 +106,6 @@
     left: -40px;
 }
 
-.cards-controls-next{
-    position: relative;
-}
-
 .cards-controls-next::before{
     border: solid #000;
     border-width: 0 5px 5px 0;
@@ -132,7 +131,6 @@
     justify-content: center;
     list-style: none;
     padding: 0;
-    position: absolute;
     width: 100%;
 }
 
@@ -149,7 +147,6 @@
 }
 
 .overlay {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -166,10 +163,18 @@
 .expanded {
   width: 120%;
   height: 120%;
-  position: absolute; /* Position fixed to cover the entire viewport */
-  top: 0vw; /* Align to the top of the viewport */
-  left: 31.5vw; /* Align to the left of the viewport */
-  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
-  object-fit: cover; /* Maintain aspect ratio */
+  top: 0vw; 
+  background-color: rgba(0, 0, 0, 0.9); 
+  object-fit: cover; 
 
+}
+
+.bottom-left{
+    
+}
+
+.pets-name{
+    display: flex;
+    flex-direction: column;
+        margin-top: 1vw;
 }

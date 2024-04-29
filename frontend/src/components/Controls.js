@@ -1,12 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import database from '../db.js'
 
 function Controls () {
-
 
     const imgRefs = useRef([]);
     const containerRefs = useRef(null);
     const controlsRefs = useRef(null);
+    const petNameRefs = useRef(null);
     const cardsControls = ['previous', 'next'];
+    let indexPet = 3;
 
     useEffect((e) => {
         const getContainer = () => {
@@ -18,9 +20,18 @@ function Controls () {
 
             const cardsControlsContainer = document.querySelector('.cards-controls');
             controlsRefs.current = cardsControlsContainer;
+
+            const petControlsContainer = document.querySelector('.pets-name');
+            petNameRefs.current = petControlsContainer;
         }
 
         getContainer();
+
+        const setPetName = (index) => {
+            indexPet = index;
+            petNameRefs.current.appendChild(document.createElement('div')).className = "pets-name"
+            document.querySelector(".pets-name").innerHTML = database[indexPet].name;
+        }
 
         const updateGallery = () => {
             imgRefs.current.forEach(item => {
@@ -33,10 +44,11 @@ function Controls () {
 
             imgRefs.current.slice(0, 5).forEach((item, i) => {
                 item.classList.add(`card-item-${i + 1}`)
-                let index = i + 1;
-                console.log(index)
-                if(index == 3){
-                    item.classList.add('expanded')
+
+                const elementMiddle = item.getAttribute('alt');
+
+                if (elementMiddle === "Imagem 3") {
+                    setPetName(i);
                 }
             });
         };
@@ -52,14 +64,13 @@ function Controls () {
 
         const setControls = () => {
             
-            console.log(!window.location.href.includes('/adoption'))
             if (!window.location.href.includes('/adoption')) {
                 return;
             }
-
+        const controls = {"previous": "<","next": ">"};
             cardsControls.forEach(control => {
                 controlsRefs.current.appendChild(document.createElement('button')).className = `cards-controls-${control}`
-                document.querySelector(`.cards-controls-${control}`).innerHTML = control;
+                document.querySelector(`.cards-controls-${control}`).innerHTML = controls[control];
             });
 
             const triggers = [...controlsRefs.current.childNodes];
@@ -69,7 +80,7 @@ function Controls () {
                     setCurrentState(control); 
                 });
             });
-        }
+        } 
 
         return () => {
             imgRefs.current = [];
@@ -78,7 +89,8 @@ function Controls () {
     }, []);
 
     return (
-        <></>
+        <>
+        </>        
     );
 };
 

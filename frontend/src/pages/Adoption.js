@@ -12,6 +12,7 @@ function Adoption() {
                 <div className="cards-container">
                     <Images/>
                </div>
+                <div className="pets-name">Mia</div>
                 <div className="cards-controls">
                     <Controls/>
                 </div>
