@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import database from '../db.js';
+import React, { useEffect, useRef } from 'react';
+import { database } from '../db.js';
 
 function Controls () {
 

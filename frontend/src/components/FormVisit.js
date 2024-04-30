@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import React, { useState } from 'react';
-import database from "../db"
+import { database } from "../db"
 
 function FormVisit(){
     const [dataForm, setDataForm] = useState({

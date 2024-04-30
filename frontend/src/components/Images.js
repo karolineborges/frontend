@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import database from '../db.js'
+import { database } from '../db.js'
 
 function Images(){
     const [isExpanded, setIsExpanded] = useState(false);

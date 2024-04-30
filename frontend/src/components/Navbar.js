@@ -32,8 +32,8 @@ function Navbar() {
                 <li className={page === 'donation' ? 'active' : ''}>
                     <Link to="/donation" onClick={() => setPage('donation')}>Doação</Link>
                 </li>
-                {sessionStorage.getItem("ADM") ? <li className={page === 'adm' ? 'active' : ''}>
-                    <Link to="/adm" onClick={() => setPage('adm')}>Administração</Link>
+                    {sessionStorage.getItem("ADM") ? <li className={page === 'administration' ? 'active' : ''}>
+                    <Link to="/administration" onClick={() => setPage('administration')}>Administração</Link>
                 </li> : ""
                 }
             </ul>

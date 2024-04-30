@@ -6,7 +6,7 @@ import cat2 from "../images/cat2.jpg";
 function Home(){
     return (
         <>
-            <div className="pets-home">
+        <div className="pets-home">
             <h1>Adote um bichinho</h1>
             <span>Nos ajude a encontrar um novo lar para eles, adote!</span>
             <button>
