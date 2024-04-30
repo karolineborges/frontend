@@ -1,12 +1,14 @@
 import { Button } from '@mui/material';
 import React, { useState } from 'react';
+import database from "../db"
 
 function FormVisit(){
     const [dataForm, setDataForm] = useState({
         petName: '',
         visitorName: '',
         email: '',
-        message: ''
+        phone: '',
+        date: ''
     });
 
     const handleChange = (e) => {
@@ -18,7 +20,8 @@ function FormVisit(){
     };
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault();   
+        console.log(dataForm)     
         
     };
 
@@ -27,7 +30,15 @@ function FormVisit(){
             <div>
                 <div>
                     <label htmlFor="petName"> Nome do Pet </label>
-                    <input type="text" name="petName" value={dataForm.firstName} onChange={handleChange} required />
+                    <select onChange={handleChange} required name="petName">
+                        {
+                            database.map((item, index)=>(
+                                <option value={item.name} >
+                                        {item.name}
+                                </option>
+                            ))
+                        }
+                    </select>
                 </div>
                 <div>
                     <label htmlFor="visitorName"> Seu nome </label>
@@ -46,8 +57,8 @@ function FormVisit(){
                     <input type="datetime-local" name="date" value={dataForm.firstName} onChange={handleChange} required />
                 </div>
             </div>
-            <Button type="submit" variant="contained" style={{ backgroundColor: 'rgb(238, 199, 126)', color: '#7B3F00', marginTop: "5vw", marginBottom: "5vw" }}>
-                Submit
+            <Button type="submit" variant="contained" style={{ backgroundColor: 'rgb(238, 199, 126)', color: '#7B3F00', marginTop: "2vw", marginBottom: "1vw" }}>
+                Agendar
             </Button>
         </form>
     );

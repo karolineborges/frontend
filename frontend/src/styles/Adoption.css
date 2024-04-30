@@ -14,7 +14,7 @@ p{
     display: flex;
     height: 320px;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 60vw;
     background-color: rgb(248, 240, 240);}
 
 .card-item{
@@ -80,7 +80,7 @@ p{
     border: 0;
     cursor: pointer;
     font-size: 30px;
-    margin: 0 3rem;
+    margin: 0 4rem;
     text-transform: capitalize;
 }
 
@@ -171,22 +171,15 @@ p{
 
 }
 
-.bottom-left{
-    
-}
-
 .pets-description{
-        color: #7B3F00;
-        background-color: rgb(238, 199, 126);
-        height: 4vw;
-        margin-bottom: 2vw;
-        margin-left: 8%;
-        width: 82vw;
-        justify-content: center;
-        border-radius: 15%;
-        border: transparent;
-        border-radius: 4rem;
-        color: #7B3F00;
+    background-color: rgb(238, 199, 126);
+    height: 4vw;
+    margin-left: 8%;
+    width: 82vw;
+    justify-content: center;
+    border: transparent;
+    border-radius: 4rem; 
+    color: #7B3F00;
 }
 
 .formVisit{
@@ -207,6 +200,24 @@ p{
     width: 27vw;
 }
 
+.formVisit div div select {
+    margin-left: 1vw;
+    width: 27.6vw;
+}
+
 .buttonSubmit{
     width: 20vw;
+}
+
+.visitButton {
+    position: absolute;
+    top: 100%;
+    transform: translate(199.9%, 116%);
+    border-radius: 20%;
+}
+
+.pets-info{
+    position: absolute;
+    transform: translate(3%, -50%);
+    border-radius: 20%;
 }
