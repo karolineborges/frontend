@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import database from '../db.js'
+import database from '../db.js';
 
 function Controls () {
 
     const imgRefs = useRef([]);
     const containerRefs = useRef(null);
     const controlsRefs = useRef(null);
-    const petNameRefs = useRef(null);
+    const petDescriptionRefs = useRef(null);
     const cardsControls = ['previous', 'next'];
     let indexPet = 3;
 
@@ -21,17 +21,19 @@ function Controls () {
             const cardsControlsContainer = document.querySelector('.cards-controls');
             controlsRefs.current = cardsControlsContainer;
 
-            const petControlsContainer = document.querySelector('.pets-name');
-            petNameRefs.current = petControlsContainer;
+            const petDescription = document.querySelector('.pets-description');
+            petDescriptionRefs.current = petDescription;
         }
 
         getContainer();
 
         const setPetName = (index) => {
             indexPet = index;
-            petNameRefs.current.appendChild(document.createElement('div')).className = "pets-name"
-            document.querySelector(".pets-name").innerHTML = database[indexPet].name;
-        }
+            let pet = database[indexPet];
+            
+            petDescriptionRefs.current.appendChild(document.createElement('div')).className = "pets-description"
+            document.querySelector(".pets-description").innerHTML = `Olaaa, Visitante! Meu nome é ${pet.name}. Idade: ${pet.age}. Vacinado: ${pet.vaccinated}. OBS: ${pet.obs}`;
+        };
 
         const updateGallery = () => {
             imgRefs.current.forEach(item => {
@@ -67,6 +69,7 @@ function Controls () {
             if (!window.location.href.includes('/adoption')) {
                 return;
             }
+
         const controls = {"previous": "<","next": ">"};
             cardsControls.forEach(control => {
                 controlsRefs.current.appendChild(document.createElement('button')).className = `cards-controls-${control}`
