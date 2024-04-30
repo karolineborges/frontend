@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Adoption from './pages/Adoption';
-import About from './pages/About';
+import Donation from './pages/Donation';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Container from './components/Container';
@@ -17,7 +17,7 @@ function App() {
         <Container>
           <Routes>
             <Route exact path="/adoption" element={<Adoption />} />
-            <Route exact path="/about" element={<About />} />
+            <Route exact path="/donation" element={<Donation />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/" element={<Home />} />
           </Routes>
