@@ -35,6 +35,8 @@ span{
 
 .pets-home button a {
     text-decoration: none;
+    font-style: none;
+    color: #7B3F00;
 }
 
 .cards-home{
@@ -63,4 +65,3 @@ span{
     object-position: 25% 50%;
     object-fit: cover;
 }
-
