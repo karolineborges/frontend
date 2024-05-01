@@ -38,6 +38,15 @@ function addPet(pet){
     sessionStorage.setItem("data", JSON.stringify(data));
 }
 
+function addSugestionPet(pet) {
+    console.log("entrou aqui")
+    let data = JSON.parse(sessionStorage.getItem("sugestion"));
+
+    data.push(pet);
+
+    sessionStorage.setItem("sugestion", JSON.stringify(data));
+}
+
 function editPet(pet, id) {
     let data = JSON.parse(sessionStorage.getItem("data"));
     
@@ -80,4 +89,4 @@ function addSugestion(id) {
     removeSugestion(id);
 }
 
-export { database, sugestion, addPet, editPet, deletePet, addSugestion, removeSugestion };
+export { database, sugestion, addPet, editPet, deletePet, addSugestion, removeSugestion, addSugestionPet };

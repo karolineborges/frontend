@@ -1,8 +1,18 @@
-p{
+.adoption p:nth-child(1){
+    color: #7B3F00;
+    margin-top: 1vw;
+}
+
+.adoption p:nth-child(2){
     background-color: rgb(248, 240, 240);
-    padding: 1vw 0;
+    padding-bottom: 1vw;
     color: #7B3F00;
 }
+
+.adoption{
+    overflow: auto;
+}
+
 body{
         background-color: rgb(248, 240, 240);
 }
@@ -97,7 +107,7 @@ body{
 
 
 .cards-controls-previous::before{
-    border: solid #000;
+    border: solid #aaa5a5;
     border-width: 0 5px 5px 0;
     content: "";
     display: inline-block;
@@ -112,7 +122,7 @@ body{
 }
 
 .cards-controls-next::before{
-    border: solid #000;
+    border: solid #aaa5a5;
     border-width: 0 5px 5px 0;
     content: "";
     display: inline-block;
@@ -233,7 +243,28 @@ body{
     margin-top: 2.5vw;
     width: 72vw;
     height: 10vh;
-    transform: translate(12%, -70%);
+    transform: translate(12%, -100%);
     border-radius: 2rem;
     background-color: rgb(238, 199, 126);
+}
+
+.mini-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    margin-top: 2vw;
+    transform: translate(30.4%, 20%);
+}
+
+.mini-cards p {
+    background-color: #e9d6d6;
+    transform: translate(-20%, -10%);
+    border-radius: 2rem;
+    width: 60vw;
+}
+
+.mini-cards span {
+    font-weight: bold;
+    cursor: pointer;
 }

@@ -1,8 +1,8 @@
 import { Button } from '@mui/material';
 import React, { useState } from 'react';
-import { addPet } from '../db';
+import { addPet, addSugestionPet } from '../db';
 
-function AddPet(){
+function AddPet({IsSugestion}){
     const [dataForm, setDataForm] = useState({
         name: '',
         age: '',
@@ -23,8 +23,11 @@ function AddPet(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        addPet(dataForm);
-        window.location.reload();
+        console.log(IsSugestion)
+        if (IsSugestion)
+            addSugestionPet(dataForm);
+        else
+            addPet(dataForm);
     };
 
     return(
@@ -42,8 +45,8 @@ function AddPet(){
                     <label htmlFor="sex"> Sexo </label>
                     <select onChange={handleChange} name="sex" required >
                         <option defaultValue >Selecione uma opção</option>
-                        <option value="F">Fêmea</option>
-                        <option value="M">Macho</option>
+                        <option value="FÊMEA">Fêmea</option>
+                        <option value="MACHO">Macho</option>
                     </select>
                 </div>
                 <div>
