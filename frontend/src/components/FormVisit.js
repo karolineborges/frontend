@@ -1,6 +1,5 @@
 import { Button } from '@mui/material';
 import React, { useState } from 'react';
-import { database } from "../db"
 
 function FormVisit(){
     const [dataForm, setDataForm] = useState({
@@ -10,6 +9,7 @@ function FormVisit(){
         phone: '',
         date: ''
     });
+    let database = JSON.parse(sessionStorage.getItem("banco"));
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -20,9 +20,7 @@ function FormVisit(){
     };
 
     const handleSubmit = (event) => {
-        event.preventDefault();   
-        console.log(dataForm)     
-        
+        event.preventDefault();         
     };
 
     return (

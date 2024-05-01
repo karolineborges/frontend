@@ -1,14 +1,13 @@
 import React, { useEffect, useRef } from 'react';
-import { database } from '../db.js';
 
 function Controls () {
-
     const imgRefs = useRef([]);
     const containerRefs = useRef(null);
     const controlsRefs = useRef(null);
     const petDescriptionRefs = useRef(null);
     const cardsControls = ['previous', 'next'];
     let indexPet = 3;
+    let database = JSON.parse(sessionStorage.getItem("banco"));
 
     useEffect((e) => {
         const getContainer = () => {

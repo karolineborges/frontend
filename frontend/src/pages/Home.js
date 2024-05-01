@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import '../styles/Home.css';
 import dog2 from "../images/dog2.jpg";
 import cat2 from "../images/cat2.jpg";
+import { database } from "../db.js"
 
 function Home(){
+    sessionStorage.setItem("banco", JSON.stringify(database));
+
     return (
         <>
         <div className="pets-home">

@@ -20,7 +20,6 @@ function AddPet(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(dataForm)
     };
 
     return(

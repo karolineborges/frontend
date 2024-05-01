@@ -1,9 +1,8 @@
 import React, {useState} from "react";
-import { database } from '../db.js'
 
 function Images(){
     const [isExpanded, setIsExpanded] = useState(false);
-
+    let database = JSON.parse(sessionStorage.getItem("banco"));
     const pets = database;
 
     const handleClick = () => {
