@@ -52,19 +52,29 @@ function EditDeletePet({index, form}){
                     </div>
                     <div>
                         <label htmlFor="sex"> Sexo </label>
-                        <input type="text" name="sex" value={dataForm.sex} onChange={handleChange} required />
+                        <select onChange={handleChange} name="sex" required value={dataForm.sex}>
+                            <option >Selecione uma opção</option>
+                            <option value="FÊMEA">Fêmea</option>
+                            <option value="MACHO">Macho</option>
+                        </select>
                     </div>
                     <div>
                         <label htmlFor="vaccinated"> Vacinado </label>
-                        <input type="text" name="vaccinated" value={dataForm.vaccinated} onChange={handleChange} required />
+                            <select onChange={handleChange} name="vaccinated" required value={dataForm.vaccinated}>
+                            <option value="SIM">Sim</option>
+                            <option value="NÃO">Não</option>
+                        </select>
                     </div>
                     <div>
                         <label htmlFor="castrated"> Castrado </label>
-                        <input type="text" name="castrated" value={dataForm.castrated} onChange={handleChange} required />
+                        <select onChange={handleChange} name="castrated" required value={dataForm.castrated}>
+                            <option value="SIM">Sim</option>
+                            <option value="NÃO">Não</option>
+                        </select>
                     </div>
                     <div>
                         <label htmlFor="obs"> Observação </label>
-                        <input type="text" name="obs" value={dataForm.obs} onChange={handleChange} required />
+                        <input type="text" name="obs" value={dataForm.obs} onChange={handleChange} />
                     </div>
                 </div>
                 <div className='actionsButtons'>
