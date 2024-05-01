@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { editPet, deletePet } from "../db"
 
 function EditDeletePet({index, form}){
-    let database = JSON.parse(sessionStorage.getItem("banco"));
+    let database = JSON.parse(sessionStorage.getItem("data"));
     let pet = database[index];
     let method = form;
 

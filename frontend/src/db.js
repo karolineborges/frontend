@@ -22,37 +22,62 @@ const database = [
     { name: "Dori", age: "9 anos", sex: "f", castrated: "Não", image: cat2, vaccinated: "Sim", obs: "Bily nasceu sem a orelha esquerda" }
 ];
 const sugestion = [
+    { name: "Flor", age: "12 meses", sex: "f", castrated: "Sim", image: dog1, vaccinated: "Sim", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+    { name: "Flor", age: "12 meses", sex: "f", castrated: "Sim", image: dog1, vaccinated: "Sim", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+    { name: "Flor", age: "12 meses", sex: "f", castrated: "Sim", image: dog1, vaccinated: "Sim", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+    { name: "Flor", age: "12 meses", sex: "f", castrated: "Sim", image: dog1, vaccinated: "Sim", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+    { name: "Flor", age: "12 meses", sex: "f", castrated: "Sim", image: dog1, vaccinated: "Sim", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
     { name: "Flor", age: "12 meses", sex: "f", castrated: "Sim", image: dog1, vaccinated: "Sim", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" }
 ];
 
 function addPet(pet){
-    let banco = JSON.parse(sessionStorage.getItem("banco"));
+    let data = JSON.parse(sessionStorage.getItem("data"));
 
-    banco.push(pet);
-    
-    sessionStorage.setItem("banco", JSON.stringify(banco));
+    data.push(pet);
+
+    sessionStorage.setItem("data", JSON.stringify(data));
 }
 
 function editPet(pet, id) {
-    let banco = JSON.parse(sessionStorage.getItem("banco"));
+    let data = JSON.parse(sessionStorage.getItem("data"));
     
-    banco[id].id = id;
-    banco[id].name = pet.petName.toUpperCase();
-    banco[id].age = pet.age.toUpperCase();
-    banco[id].sex = pet.sex.toUpperCase();
-    banco[id].obs = pet.obs;
-    banco[id].vaccinated = pet.vaccinated.toUpperCase();
-    banco[id].castrated = pet.castrated.toUpperCase();
+    data[id].id = id;
+    data[id].name = pet.petName.toUpperCase();
+    data[id].age = pet.age.toUpperCase();
+    data[id].sex = pet.sex.toUpperCase();
+    data[id].obs = pet.obs;
+    data[id].vaccinated = pet.vaccinated.toUpperCase();
+    data[id].castrated = pet.castrated.toUpperCase();
 
-    sessionStorage.setItem("banco", JSON.stringify(banco));
+    sessionStorage.setItem("data", JSON.stringify(data));
 }
 
 function deletePet(id) {
-    let banco = JSON.parse(sessionStorage.getItem("banco"));
+    let data = JSON.parse(sessionStorage.getItem("data"));
 
-    banco.splice(id, 1);
+    data.splice(id, 1);
 
-    sessionStorage.setItem("banco", JSON.stringify(banco));
+    sessionStorage.setItem("data", JSON.stringify(data));
 }
 
-export { database, sugestion, addPet, editPet, deletePet };
+function removeSugestion(id){
+    let data = JSON.parse(sessionStorage.getItem("sugestion"));
+
+    data.splice(id, 1);
+
+    sessionStorage.setItem("sugestion", JSON.stringify(data));
+}
+
+function addSugestion(id) {
+    let sugestions = JSON.parse(sessionStorage.getItem("sugestion"));
+    let pet = sugestions[id];
+    let data = JSON.parse(sessionStorage.getItem("aux"));
+
+    data.push(pet);
+
+    sessionStorage.setItem("aux", JSON.stringify(data));
+
+    removeSugestion(id);
+}
+
+export { database, sugestion, addPet, editPet, deletePet, addSugestion, removeSugestion };

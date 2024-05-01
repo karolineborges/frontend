@@ -24,6 +24,7 @@ function AddPet(){
     const handleSubmit = (event) => {
         event.preventDefault();
         addPet(dataForm);
+        window.location.reload();
     };
 
     return(

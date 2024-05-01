@@ -7,7 +7,7 @@ function Controls () {
     const petDescriptionRefs = useRef(null);
     const cardsControls = ['previous', 'next'];
     let indexPet = 3;
-    let database = JSON.parse(sessionStorage.getItem("banco"));
+    let database = JSON.parse(sessionStorage.getItem("data"));
 
     useEffect((e) => {
         const getContainer = () => {

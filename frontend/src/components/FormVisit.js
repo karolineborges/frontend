@@ -9,7 +9,7 @@ function FormVisit(){
         phone: '',
         date: ''
     });
-    let database = JSON.parse(sessionStorage.getItem("banco"));
+    let database = JSON.parse(sessionStorage.getItem("data"));
 
     const handleChange = (e) => {
         const { name, value } = e.target;

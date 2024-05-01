@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 function Images(){
     const [isExpanded, setIsExpanded] = useState(false);
-    let database = JSON.parse(sessionStorage.getItem("banco"));
+    let database = JSON.parse(sessionStorage.getItem("data"));
     const pets = database;
 
     const handleClick = () => {
