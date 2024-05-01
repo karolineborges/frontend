@@ -19,7 +19,7 @@ function Login(){
 
     return (
         <div className="login-container">
-            <h2>Login</h2>
+            <h2>Acesso ADM</h2>
             <form className="login-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="user">Usuário:</label>
