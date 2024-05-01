@@ -23,10 +23,10 @@ function Adoption() {
                     <Controls/>
                 </div>
                 <div className="pets-info">
-                    <Modal closeModal={closeModal} />
                     <div className="pets-description">
-                        Mia
+                       <div>Mia</div> 
                     </div>
+                    <Modal closeModal={closeModal} />
                 </div>
             </div>
         </div>

@@ -31,7 +31,7 @@ function Controls () {
             let pet = database[indexPet];
             
             petDescriptionRefs.current.appendChild(document.createElement('div')).className = "pets-description"
-            document.querySelector(".pets-description").innerHTML = `Olaaa, Visitante! Meu nome é ${pet.name}. Idade: ${pet.age}. Vacinado: ${pet.vaccinated}. OBS: ${pet.obs}`;
+            document.querySelector(".pets-description").innerHTML = `Ola, Visitante! Meu nome é ${pet.name.toUpperCase()}. Idade: ${pet.age}. Vacinado: ${pet.vaccinated}. OBS: ${pet.obs}`;
         };
 
         const updateGallery = () => {
@@ -69,14 +69,17 @@ function Controls () {
                 return;
             }
 
-        const controls = {"previous": "<","next": ">"};
+            const controls = {"previous": "<","next": ">"};
             cardsControls.forEach(control => {
+                console.log(control)
                 controlsRefs.current.appendChild(document.createElement('button')).className = `cards-controls-${control}`
                 document.querySelector(`.cards-controls-${control}`).innerHTML = controls[control];
             });
 
             const triggers = [...controlsRefs.current.childNodes];
             triggers.forEach(control => {
+                console.log(control)
+
                 control.addEventListener('click', e => {
                     e.preventDefault();
                     setCurrentState(control); 

@@ -104,10 +104,6 @@ p{
     width: 5px;
 }
 
-.cards-controls-previous:hover::before{
-    left: -40px;
-}
-
 .cards-controls-next::before{
     border: solid #000;
     border-width: 0 5px 5px 0;
@@ -172,14 +168,21 @@ p{
 }
 
 .pets-description{
-    background-color: rgb(238, 199, 126);
     height: 4vw;
-    margin-left: 8%;
     width: 82vw;
     justify-content: center;
     border: transparent;
     border-radius: 4rem; 
     color: #7B3F00;
+    padding: 0;
+}
+
+.pets-description p {
+    background-color: antiquewhite;
+}
+
+.pets-description span {
+    font-style: bold;
 }
 
 .formVisit{
@@ -210,14 +213,16 @@ p{
 }
 
 .visitButton {
-    position: absolute;
-    top: 100%;
-    transform: translate(199.9%, 116%);
-    border-radius: 20%;
+    transform: translate(-3.9%, 27%);
 }
 
-.pets-info{
+.pets-info {
+    display: flex;
     position: absolute;
-    transform: translate(3%, -50%);
-    border-radius: 20%;
+    margin-top: 2.5vw;
+    width: 72vw;
+    height: 10vh;
+    transform: translate(20%, -70%);
+    border-radius: 2rem;
+    background-color: rgb(238, 199, 126);
 }
