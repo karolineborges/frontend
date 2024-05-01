@@ -99,8 +99,8 @@ function Administration(){
                             <th>Sexo</th>
                             <th>Castrado</th>
                             <th>Vacinado</th>
-                            <th>OBS</th>
                             <th>Ações</th>
+                            <th>OBS</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -113,7 +113,6 @@ function Administration(){
                                 <td>{pet.sex}</td>
                                 <td>{pet.castrated}</td>
                                 <td>{pet.vaccinated}</td>
-                                <td>SVG</td>
                                 {
                                     button !== "sugestion" ?
                                     <td className="actions-icons">
@@ -142,6 +141,17 @@ function Administration(){
                                         </svg>
                                     </td>
                                 }
+                                <td title={pet.obs}>
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginTop: "0.33vw", marginLeft: "0.3vw" }}>
+
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                        <g id="SVGRepo_iconCarrier"> <path d="M7 8H17M7 12H17M9 16H15M4 4H20V20H4V4Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /> </g>
+
+                                    </svg>
+                                </td>
                             </tr>
                         ))
                     }
