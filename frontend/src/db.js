@@ -27,16 +27,9 @@ const sugestion = [
 
 function addPet(pet){
     let banco = JSON.parse(sessionStorage.getItem("banco"));
-    let id = banco.length + 1;
 
-    banco[id].id = id;
-    banco[id].name = pet.petName.toUpperCase();
-    banco[id].age = pet.age.toUpperCase();
-    banco[id].sex = pet.sex.toUpperCase();
-    banco[id].obs = pet.obs;
-    banco[id].vaccinated = pet.vaccinated.toUpperCase();
-    banco[id].castrated = pet.castrated.toUpperCase();
-
+    banco.push(pet);
+    
     sessionStorage.setItem("banco", JSON.stringify(banco));
 }
 
