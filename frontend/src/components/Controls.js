@@ -73,7 +73,6 @@ function Controls () {
             cardsControls.forEach(control => {
                 console.log(control)
                 controlsRefs.current.appendChild(document.createElement('button')).className = `cards-controls-${control}`
-                document.querySelector(`.cards-controls-${control}`).innerHTML = controls[control];
             });
 
             const triggers = [...controlsRefs.current.childNodes];
