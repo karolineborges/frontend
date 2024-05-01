@@ -39,7 +39,6 @@ function addPet(pet){
 }
 
 function addSugestionPet(pet) {
-    console.log("entrou aqui")
     let data = JSON.parse(sessionStorage.getItem("sugestion"));
 
     data.push(pet);
@@ -82,9 +81,15 @@ function addSugestion(id) {
     let pet = sugestions[id];
     let data = JSON.parse(sessionStorage.getItem("aux"));
 
+    console.log("aux do addSugestion pets")
+    console.log(data)
+
     data.push(pet);
 
     sessionStorage.setItem("aux", JSON.stringify(data));
+
+    console.log("aux do addSugestion pets")
+    console.log(data)
 
     removeSugestion(id);
 }

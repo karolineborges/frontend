@@ -23,11 +23,13 @@ function AddPet({IsSugestion}){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(IsSugestion)
+
         if (IsSugestion)
             addSugestionPet(dataForm);
         else
             addPet(dataForm);
+
+        window.location.reload();
     };
 
     return(

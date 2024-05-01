@@ -19,6 +19,8 @@ function Adoption() {
 
     const handleOpenModal = (e) => {
         let aux = JSON.parse(sessionStorage.getItem("aux"));
+        console.log("aux do incluir sugestão de pets")
+        console.log(aux)
 
         if (aux)
             sessionStorage.setItem("data", JSON.stringify(aux));

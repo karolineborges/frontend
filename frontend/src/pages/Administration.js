@@ -6,7 +6,7 @@ import AddPet from "../components/AddPet.js";
 import { addSugestion, removeSugestion } from "../db.js"
 
 function Administration(){
-    let data = JSON.parse(sessionStorage.getItem("data"));
+    const [data, setData] = useState(JSON.parse(sessionStorage.getItem("data")));
 
     const [open, setOpen] = useState(false);
     const [form, setForm] = useState("");
@@ -14,6 +14,9 @@ function Administration(){
 
     const handleOpenModal = (e) => {
         let aux = JSON.parse(sessionStorage.getItem("aux"));
+
+        console.log("aux do adicionar novo pets")
+        console.log(aux)
 
         if(aux)
             sessionStorage.setItem("data", JSON.stringify(aux));
@@ -28,20 +31,36 @@ function Administration(){
 
     const handleClick = (e) => {
         setButton(e.target.id);
-        data = JSON.parse(sessionStorage.getItem("data"));
+        setData(JSON.parse(sessionStorage.getItem("data")));
         sessionStorage.setItem("aux", JSON.stringify(data));
 
-        data = JSON.parse(sessionStorage.getItem("sugestion"));
+        console.log("aux do visualizar sugestoes de pets")
+        console.log(data)
+
+        setData(JSON.parse(sessionStorage.getItem("sugestion")));
         sessionStorage.setItem("data", JSON.stringify(data));
     }
 
     const handleSugestion = (index, event) => {
         let action = event.target.id;
 
-        if(action == "delete-sugestion"){
+        if (action === "delete-sugestion"){
             removeSugestion(index);
         } else {
             addSugestion(index);
+        }
+        setData(JSON.parse(sessionStorage.getItem("sugestion")));
+    }
+
+    const handleList = () => {
+        let aux = JSON.parse(sessionStorage.getItem("aux"));
+        setButton("");
+
+        console.log("aux do Listar pets")
+        console.log(aux);
+
+        if (aux){
+            setData(aux);
         }
     }
 
@@ -49,17 +68,20 @@ function Administration(){
         <div className="adm">
             <h1>Ações de Administrador</h1>
             <div style={{ display: "flex" }}>
-                <Button  onClick={handleOpenModal} className='buttonClose' style={{ margin: "1vw 6.3vw 0 0" }}>
+                <Button onClick={handleList} className='buttonClose' style={{ margin: "1vw 6.3vw 0 0", width: "15vw" }}>
+                    Listar pets
+                </Button>
+                <Button onClick={handleOpenModal} className='buttonClose' style={{ margin: "1vw 6.3vw 0 0", width: "15vw" }}>
                     Adicionar novo pet
                 </Button>
-                <Button id="sugestion" onClick={handleClick} className='buttonClose' style={{ margin: "1vw 0 0 0" }}>
+                <Button id="sugestion" onClick={handleClick} className='buttonClose' style={{ margin: "1vw 0 0 0", width: "15vw" }}>
                     Verificar sugestões
                 </Button>
             </div>
             <Dialog open={open} onClose={handleCloseModal}>
                 <DialogTitle style={{ backgroundColor: "#adf0b6", color: "#7B3F00", fontWeight: "bold" }}> Edição </DialogTitle >
                 <DialogContent style={{ marginTop: "1vw" }}>
-                    <AddPet /> 
+                    <AddPet i /> 
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleCloseModal} className='buttonClose'>

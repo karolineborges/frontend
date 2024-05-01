@@ -69,15 +69,12 @@ function Controls () {
                 return;
             }
 
-            const controls = {"previous": "<","next": ">"};
             cardsControls.forEach(control => {
-                console.log(control)
                 controlsRefs.current.appendChild(document.createElement('button')).className = `cards-controls-${control}`
             });
 
             const triggers = [...controlsRefs.current.childNodes];
             triggers.forEach(control => {
-                console.log(control)
 
                 control.addEventListener('click', e => {
                     e.preventDefault();
