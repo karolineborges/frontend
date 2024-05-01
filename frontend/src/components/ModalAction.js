@@ -20,6 +20,7 @@ function ModalAction({index}) {
     return (
         <div style={{display: "flex"}}>
             <svg id="editPet" onClick={handleOpenModal} style={{ marginTop: "0.3vw" }}  width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <title>Editar</title>
 
                 <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
@@ -29,6 +30,7 @@ function ModalAction({index}) {
 
             </svg>
             <svg id="deletePet" onClick={handleOpenModal} width="24px" height="24px" viewBox="-245.76 -245.76 1515.52 1515.52" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                <title>Excluir</title>
 
                 <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 

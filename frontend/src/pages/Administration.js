@@ -49,7 +49,7 @@ function Administration(){
         <div className="adm">
             <h1>Ações de Administrador</h1>
             <div style={{ display: "flex" }}>
-                <Button  onClick={handleOpenModal} className='buttonClose' style={{ margin: "1vw 9vw 0 0" }}>
+                <Button  onClick={handleOpenModal} className='buttonClose' style={{ margin: "1vw 6.3vw 0 0" }}>
                     Adicionar novo pet
                 </Button>
                 <Button id="sugestion" onClick={handleClick} className='buttonClose' style={{ margin: "1vw 0 0 0" }}>
@@ -98,7 +98,8 @@ function Administration(){
                                         <ModalAction index={index}></ModalAction>
                                     </td> : 
                                     <td>
-                                            <svg id='add-sugestion' onClick={(event) => handleSugestion(index, event)}  width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg id='add-sugestion' onClick={(event) => handleSugestion(index, event)}  width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Adicionar</title>
 
                                             <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
@@ -107,7 +108,8 @@ function Administration(){
                                             <g id="SVGRepo_iconCarrier"> <path d="M6 12H18M12 6V18" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /> </g>
 
                                         </svg>
-                                            <svg id='delete-sugestion' onClick={(event) => handleSugestion(index, event) } fill="#000000" height="12px" width="16px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180.607 180.607" style={{ marginBottom: "0.4vw", marginLeft: "0.3vw" }}>
+                                        <svg id='delete-sugestion' onClick={(event) => handleSugestion(index, event) } fill="#000000" height="12px" width="16px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180.607 180.607" style={{ marginBottom: "0.4vw", marginLeft: "0.3vw" }}>
+                                            <title>Excluir</title>
 
                                             <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
