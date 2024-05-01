@@ -2,7 +2,6 @@ import { Button } from '@mui/material';
 import React, { useState } from 'react';
 import { editPet, deletePet } from "../db"
 
-
 function EditDeletePet({index, form}){
     let database = JSON.parse(sessionStorage.getItem("banco"));
     let pet = database[index];
@@ -30,10 +29,12 @@ function EditDeletePet({index, form}){
         event.preventDefault();
 
         editPet(dataForm, index);
+        window.location.reload();
     };
 
     const handleClick = () => {
         deletePet(index);
+        window.location.reload();
     }
 
     return (
