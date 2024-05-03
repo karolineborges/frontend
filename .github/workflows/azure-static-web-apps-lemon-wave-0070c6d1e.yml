@@ -15,9 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - name: Disable treating warnings as errors
+        run: echo "CI=false" >> $GITHUB_ENV
       - uses: actions/checkout@v3
         with:
-          node-version: '20.0.0'
           submodules: true
           lfs: false
       - name: Build And Deploy
