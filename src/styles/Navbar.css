@@ -7,6 +7,7 @@
     height: 8vw;
     display: flex;
     width: 100%;
+    z-index: 1;
 }
 
 .container {
@@ -112,7 +113,7 @@
     }
 
     .navbar{
-        height: 14vw;
+        height: 17vw;
         width: 100vw;
     }
 

@@ -29,13 +29,13 @@ body{
 .cards-container{
     align-items: center;
     display: flex;
-    height: 320px;
+    height: 25vw;
     margin: 0 auto;
     max-width: 60vw;
     background-color: rgb(248, 240, 240);}
 
 .card-item{
-    height: 200px;
+    height: 15vw;
     opacity: 0;
     position: absolute;
     transition: all 0.3s ease-in-out;
@@ -52,9 +52,9 @@ body{
 }
 
 .card-item-2, .card-item-4{
-    height: 250px;
+    height: 44vh;
     opacity: 0.8;
-    width: 380px;
+    width: 26vw;
     z-index: 1;
 }
 
@@ -64,14 +64,13 @@ body{
 }
 
 .card-item-3 {
-    height: 300px;
+    height: 53vh;
     opacity: 1;
-    width: 430px;
+    width: 33vw;
     z-index: 2;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35);
-    cursor: pointer;
 }
 
 .card-item-4 {
@@ -267,4 +266,84 @@ body{
 .mini-cards span {
     font-weight: bold;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .adoption {
+         height: 80vh;
+        overflow-x: hidden;
+        z-index: 0;
+        overflow: hidden;
+    }
+    .card-item-1 {
+        left: 15%;
+        opacity: .4;
+        transform: translateX(-50%);
+    }
+
+    .card-item-2,
+    .card-item-4 {
+        height: 44vh;
+        opacity: 0.8;
+        width: 26vw;
+        opacity: 0;
+    }
+
+    .card-item-2 {
+        opacity: 0;
+    }
+
+    .card-item-3 {
+        height: 43vh;
+        opacity: 1;
+        width: 95vw;
+        left: 50%;
+        z-index: 0;
+        transform: translate(-50%, 35%);
+        box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+    }
+
+    .card-item-4 {
+        opacity: 0;
+    }
+
+    .card-item-5 {
+        opacity: 0;
+    }
+
+    .pets-info {
+        display: flex;
+        flex-direction: column;
+        width: 96vw;
+        height: 25vh;
+        border-radius: 1rem;
+        transform: translate(-3%, 98%);
+        background-color: rgb(238, 199, 126);
+    }
+
+    .pets-info div button {
+        width: 60vw !important;
+        transform: translateY(-8%);
+    }
+
+    .pets-description  {
+        width: 100%;
+        height: 40vw;
+        transform: translateY(12%);
+    }
+
+    .cards-controls {
+        width: 0%;
+    }
+
+    .mini-cards  {
+        width: 90vw;
+
+    }
+
+    .mini-cards p {
+        width: 100vw;
+                transform: translate(-30%, 505%);
+    }
+
 }
