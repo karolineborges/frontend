@@ -4,7 +4,6 @@ import '../App.css';
 import Images from '../components/Images.js';
 import Controls from '../components/Controls.js';
 import Modal from '../components/Modal.js';
-import ModalAction from "../components/ModalAction.js";
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import AddPet from "../components/AddPet.js";
 
@@ -19,8 +18,6 @@ function Adoption() {
 
     const handleOpenModal = (e) => {
         let aux = JSON.parse(sessionStorage.getItem("aux"));
-        console.log("aux do incluir sugestão de pets")
-        console.log(aux)
 
         if (aux)
             sessionStorage.setItem("data", JSON.stringify(aux));

@@ -7,16 +7,12 @@ import { addSugestion, removeSugestion } from "../db.js"
 
 function Administration(){
     const [data, setData] = useState(JSON.parse(sessionStorage.getItem("data")));
-
     const [open, setOpen] = useState(false);
     const [form, setForm] = useState("");
     const [button, setButton] = useState("");
 
     const handleOpenModal = (e) => {
         let aux = JSON.parse(sessionStorage.getItem("aux"));
-
-        console.log("aux do adicionar novo pets")
-        console.log(aux)
 
         if(aux)
             sessionStorage.setItem("data", JSON.stringify(aux));
@@ -33,9 +29,6 @@ function Administration(){
         setButton(e.target.id);
         setData(JSON.parse(sessionStorage.getItem("data")));
         sessionStorage.setItem("aux", JSON.stringify(data));
-
-        console.log("aux do visualizar sugestoes de pets")
-        console.log(data)
 
         setData(JSON.parse(sessionStorage.getItem("sugestion")));
         sessionStorage.setItem("data", JSON.stringify(data));
@@ -55,9 +48,6 @@ function Administration(){
     const handleList = () => {
         let aux = JSON.parse(sessionStorage.getItem("aux"));
         setButton("");
-
-        console.log("aux do Listar pets")
-        console.log(aux);
 
         if (aux){
             setData(aux);
@@ -111,7 +101,7 @@ function Administration(){
                                 <td>{pet.name}</td>
                                 <td>{pet.age}</td>
                                 <td>{pet.sex}</td>
-                                <td>{pet.castrated}</td>
+                                <td>{pet.castrated}</td> 
                                 <td>{pet.vaccinated}</td>
                                 {
                                     button !== "sugestion" ?

@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import React, { useState } from 'react';
+import { scheduleVisit } from "../services/ScheduleService";
 
 function FormVisit(){
     const [dataForm, setDataForm] = useState({
@@ -7,7 +8,8 @@ function FormVisit(){
         visitorName: '',
         email: '',
         phone: '',
-        date: ''
+        date: '',
+        petId: 1
     });
     let database = JSON.parse(sessionStorage.getItem("data"));
 
@@ -21,6 +23,8 @@ function FormVisit(){
 
     const handleSubmit = (event) => {
         event.preventDefault();         
+
+        scheduleVisit(dataForm);
     };
 
     return (
