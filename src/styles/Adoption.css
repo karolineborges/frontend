@@ -270,11 +270,18 @@ body{
 
 @media (max-width: 768px) {
     .adoption {
-         height: 80vh;
-        overflow-x: hidden;
+        height: 100vh;
+                overflow-x: hidden;
         z-index: 0;
         overflow: hidden;
     }
+
+    .cards{
+        height: 100vh;
+        display: flex;
+        flex-direction: column
+    }
+
     .card-item-1 {
         left: 15%;
         opacity: .4;
@@ -299,7 +306,6 @@ body{
         width: 95vw;
         left: 50%;
         z-index: 0;
-        transform: translate(-50%, 35%);
         box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
     }
 
@@ -311,19 +317,25 @@ body{
         opacity: 0;
     }
 
+    .cards-container {
+        height: 40vh;
+        margin: 0;
+        width: inherit;
+    }
+
     .pets-info {
         display: flex;
         flex-direction: column;
         width: 96vw;
         height: 25vh;
         border-radius: 1rem;
-        transform: translate(-3%, 98%);
+        transform: translate(-3%, 170%);
         background-color: rgb(238, 199, 126);
     }
 
     .pets-info div button {
-        width: 60vw !important;
-        transform: translateY(-8%);
+        width: 80vw !important;
+        transform: translateY(-28%);
     }
 
     .pets-description  {
@@ -338,7 +350,7 @@ body{
 
     .mini-cards  {
         width: 90vw;
-
+        transform: translate(30%, -248%);
     }
 
     .mini-cards p {
@@ -346,4 +358,15 @@ body{
                 transform: translate(-30%, 505%);
     }
 
+    .container-content{
+        height: 100vh;
+    }
+
+    .cards-controls-next{
+        transform: translate(1000%, -395%);
+    }
+
+    .cards-controls-previous{
+        transform: translate(-478%, -435%);
+    }
 }

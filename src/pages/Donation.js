@@ -6,7 +6,7 @@ function Donation(){
     return(
         <>
             <section className="donation">
-                <div className="image">
+                <div className="image-cat">
                     <img src={cat}></img>
                 </div>
                 <div className="infos">
