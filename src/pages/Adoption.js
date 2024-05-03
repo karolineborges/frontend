@@ -9,7 +9,7 @@ import AddPet from "../components/AddPet.js";
 
 
 function Adoption() {
-    const [modalOpen, setModalOpen] = useState(false);
+    const [,setModalOpen] = useState(false);
     const [open, setOpen] = useState(false);
 
     const closeModal = () => {

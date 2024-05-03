@@ -65,3 +65,42 @@ span{
     object-position: 25% 50%;
     object-fit: cover;
 }
+
+
+@media (max-width: 768px) {
+    .pets-home {
+        height: 12vw;
+    }
+
+    .pets-home span {
+        margin-top: 2vw;
+        
+    }
+
+    .pets-home button{
+        width: 60vw;
+        height: 200%;
+        margin: 4vw 0;
+    }
+
+    .container-content h3{
+        display: none;
+    }
+
+    .cards-home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80%;
+        align-items: center;
+        margin-top: 6vw;
+    }
+
+
+    .card-home {
+        width: 80%;    
+        margin: 3vw;
+    }
+
+    
+}

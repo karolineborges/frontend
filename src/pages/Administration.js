@@ -8,7 +8,7 @@ import { addSugestion, removeSugestion } from "../db.js"
 function Administration(){
     const [data, setData] = useState(JSON.parse(sessionStorage.getItem("data")));
     const [open, setOpen] = useState(false);
-    const [form, setForm] = useState("");
+    const [,setForm] = useState("");
     const [button, setButton] = useState("");
 
     const handleOpenModal = (e) => {
