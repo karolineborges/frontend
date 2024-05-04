@@ -1,3 +1,8 @@
+.container-content {
+    overflow-y: scroll;
+    min-height: 100vh;
+}
+
 .adoption p:nth-child(1){
     color: #7B3F00;
     margin-top: 1vw;
@@ -13,32 +18,30 @@
     overflow: auto;
     display: flex;
     flex-direction: column;
-    height: 68vh;
+    align-items: center;
+    height: 89vh;
 }
 
 body{
         background-color: rgb(248, 240, 240);
 }
 
-.cards{
+.cards {
     width: 100%;
     background-color: rgb(248, 240, 240);
     width: 90vw;
-    left: 2vw;
-    position: absolute;
-    transform: translate(2.7%, -13%);
-    margin-top: 3vw;
-    scale: 0.8;
+    left: 40vw;
+    scale: 1;
 }
+
+
 
 .cards-container{
     align-items: center;
     display: flex;
-    height: 25vw;
-    margin: 0 auto;
-    max-width: 60vw;
+    height: 24vw;
     background-color: rgb(248, 240, 240);
-    scale: 0.8;
+    scale: 0.9;
 }
 
 .card-item{
@@ -198,11 +201,10 @@ body{
 .pets-description{
     height: 4vw;
     width: 82vw;
-    justify-content: center;
     border: transparent;
     border-radius: 4rem; 
     color: #7B3F00;
-    padding: 0;
+    padding: 0 2vw;
 }
 
 .pets-description p {
@@ -241,34 +243,34 @@ body{
 }
 
 .visitButton {
-    transform: translate(-3.9%, 27%);
+    transform: translateX(-3.9%);
 }
 
 .pets-info {
     display: flex;
-    position: absolute;
-    margin-top: 2.5vw;
+    justify-content: center;
+    align-items: center;
     width: 72vw;
     height: 10vh;
-    transform: translate(12%, -100%);
     border-radius: 2rem;
     background-color: rgb(238, 199, 126);
 }
+
 
 .mini-cards{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40vw;
-    margin-top: 2vw;
-    position: absolute;
-    bottom: 15vh;
-    left: 31.6vw;
+
+
+
 }
+
+
 
 .mini-cards p {
     background-color: #e9d6d6;
-    transform: translate(-7%, 30%);
     border-radius: 2rem;
     width: 100vw;
 }
@@ -279,22 +281,25 @@ body{
     cursor: pointer;
 }
 
+.pets-actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media (max-width: 768px) {
     .adoption {
         height: 80vh;
-    }
-
-    .adoption p {
-        z-index: 3vw;
+        background-color: rgb(248, 240, 240);
     }
 
     .cards{
-        height:60vh;
+        height:80vh;
         width: 96vw;
         display: flex;
         align-items: start;
         justify-content: center;
-        margin-top: 6vh;
+        margin-top: 3vh;
         background-color: white;
         border-radius: 1REm;
     }
@@ -319,37 +324,38 @@ body{
         left: 50%;
         z-index: 0;
         box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
-        transform: translate(-66%,10%);
+        transform: translate(-66%,0%);
     }
 
     .cards-container {
-        height: 40vh;
+        height: 48vh;
         margin: 0;
         width: inherit;
         display: flex;
         scale: 1;
+        background-color: transparent;
+        z-index: 0;
     }
 
     .pets-info {
         display: flex;
         flex-direction: column;
         width: 96vw;
-        height: 25vh;
-        margin-top: 10vw;
+        height: 26vh;
+        margin-top: 6vw;
         border-radius: 1rem;
-        transform: translate(0%, 170%);
         background-color: rgb(238, 199, 126);
     }
 
     .pets-info div button {
-        width: 80vw !important;
-        transform: translateY(-28%);
+        width: 60vw !important;
+        margin: 1rem;
     }
 
     .pets-description  {
         width: 100%;
-        height: 40vw;
-        transform: translateY(12%);
+        height: 30vw;
+        padding: 1rem 3rem;
     }
 
     .cards-controls {
@@ -369,13 +375,13 @@ body{
     }
     
     .mini-cards {
-        width: inherit;
+        width: 96vw;
+        margin-top: 1rem;
     }
 
     .mini-cards p {
         background-color: #e9d6d6;
-        transform: translate(-2%, -10%);
         border-radius: 1rem;
-        width: 78vw;
+        margin-bottom: 3rem;
     }
 }

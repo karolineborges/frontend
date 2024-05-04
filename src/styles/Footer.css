@@ -1,12 +1,8 @@
 footer {
     height: 27vh;
     bottom: 0;
-    width: 100%;
     background-color: #adf0b6;
     margin-top: 2vh;
-}
-
-.footer{
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -24,7 +20,7 @@ footer {
 }
 
 .footer p {
-    margin-top: 2vw;
+    margin-top: 5vh;
     text-align: center;
     color: white;
 }
@@ -36,7 +32,7 @@ footer {
     }
 
     .footer p {
-        margin-top: 4vw;
+        margin-top: 3.3vh;
         text-align: center;
         color: white;
     }

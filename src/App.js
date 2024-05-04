@@ -9,8 +9,7 @@ import Login from './pages/Login';
 import Administration from './pages/Administration';
 import Container from './components/Container';
 import { Routes } from 'react-router-dom';
-import Footer
- from './components/Footer';
+
 function App() {
   return (
     <div className="App">

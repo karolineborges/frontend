@@ -59,6 +59,5 @@ svg{
 }
 
 .container-content {
-  overflow-y: scroll;
   min-height: 10vh;
 }

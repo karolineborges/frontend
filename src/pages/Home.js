@@ -4,7 +4,6 @@ import '../styles/Login.css';
 import dog2 from "../images/dog2.jpg";
 import cat2 from "../images/cat2.jpg";
 import { database, sugestion } from "../db.js"
-import Footer from "../components/Footer.js";
 
 function Home(){
     sessionStorage.setItem("data", JSON.stringify(database));

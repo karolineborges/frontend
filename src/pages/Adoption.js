@@ -39,26 +39,28 @@ function Adoption() {
                 <div className="cards-controls">
                     <Controls/>
                 </div>
+            </div>
+            <div className="pets-actions">
                 <div className="pets-info">
                     <div className="pets-description">
-                       <div>Mia</div> 
+                        <div>Mia</div>
                     </div>
                     <Modal closeModal={closeModal} />
                 </div>
-                <Dialog open={open} onClose={handleCloseModal}>
-                    <DialogTitle style={{ backgroundColor: "#adf0b6", color: "#7B3F00", fontWeight: "bold" }}> Sugestão de Pet </DialogTitle >
-                    <DialogContent style={{ marginTop: "1vw" }}>
-                        <AddPet IsSugestion={true}/>
-                    </DialogContent>
-                    <DialogActions>
-                        <Button onClick={handleCloseModal} className='buttonClose'>
-                            Fechar
-                        </Button>
-                    </DialogActions>
-                </Dialog>
-            </div>
-            <div className="mini-cards">
-                <p>Conhece algum animalzinho que esteja aprecisando de abrigo temporário? Faça o cadastro dele <span onClick={handleOpenModal}>AQUI!</span></p>
+                <div className="mini-cards">
+                    <Dialog open={open} onClose={handleCloseModal}>
+                        <DialogTitle style={{ backgroundColor: "#adf0b6", color: "#7B3F00", fontWeight: "bold" }}> Sugestão de Pet </DialogTitle >
+                        <DialogContent style={{ marginTop: "1vw" }}>
+                            <AddPet IsSugestion={true} />
+                        </DialogContent>
+                        <DialogActions>
+                            <Button onClick={handleCloseModal} className='buttonClose'>
+                                Fechar
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
+                    <p>Conhece algum animalzinho que esteja aprecisando de abrigo temporário? Faça o cadastro dele <span onClick={handleOpenModal}>AQUI!</span></p>
+                </div>
             </div>
         </div>
     );
