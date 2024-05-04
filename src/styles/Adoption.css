@@ -13,7 +13,7 @@
     overflow: auto;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 68vh;
 }
 
 body{
@@ -26,8 +26,8 @@ body{
     width: 90vw;
     left: 2vw;
     position: absolute;
-    transform: translate(02.7%, 0%);
-    margin-top: 2vw;
+    transform: translate(2.7%, -13%);
+    margin-top: 3vw;
     scale: 0.8;
 }
 
@@ -37,7 +37,9 @@ body{
     height: 25vw;
     margin: 0 auto;
     max-width: 60vw;
-    background-color: rgb(248, 240, 240);}
+    background-color: rgb(248, 240, 240);
+    scale: 0.8;
+}
 
 .card-item{
     height: 15vw;
@@ -257,18 +259,19 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 65vw;
+    width: 55vw;
     margin-top: 2vw;
     position: absolute;
-    bottom: 2vw;
-    left: 28.6vw;
+    bottom: 15vh;
+    left: 31.6vw;
 }
 
 .mini-cards p {
     background-color: #e9d6d6;
     transform: translate(-20%, -10%);
     border-radius: 2rem;
-    width: 100vw;}
+    width: 100vw;
+}
 
 
 .mini-cards span {
@@ -278,16 +281,22 @@ body{
 
 @media (max-width: 768px) {
     .adoption {
-        height: 100vh;
-                overflow-x: hidden;
-        z-index: 0;
-        overflow: hidden;
+        height: 80vh;
+    }
+
+    .adoption p {
+        z-index: 3vw;
     }
 
     .cards{
-        height: 100vh;
+        height:60vh;
+        width: 96vw;
         display: flex;
-        flex-direction: column
+        align-items: start;
+        justify-content: center;
+        margin-top: 6vh;
+        background-color: white;
+        border-radius: 1REm;
     }
 
     .card-item-1 {
@@ -296,39 +305,29 @@ body{
         transform: translateX(-50%);
     }
 
+    .card-item-1,
+    .card-item-5,
     .card-item-2,
     .card-item-4 {
-        height: 44vh;
-        opacity: 0.8;
-        width: 26vw;
-        opacity: 0;
-    }
-
-    .card-item-2 {
-        opacity: 0;
+        display: none;
     }
 
     .card-item-3 {
-        height: 43vh;
         opacity: 1;
-        width: 95vw;
+        width: 105vw;
+        scale: 0.75;
         left: 50%;
         z-index: 0;
         box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
-    }
-
-    .card-item-4 {
-        opacity: 0;
-    }
-
-    .card-item-5 {
-        opacity: 0;
+        transform: translate(-66%,10%);
     }
 
     .cards-container {
         height: 40vh;
         margin: 0;
         width: inherit;
+        display: flex;
+        scale: 1;
     }
 
     .pets-info {
@@ -336,8 +335,9 @@ body{
         flex-direction: column;
         width: 96vw;
         height: 25vh;
+        margin-top: 10vw;
         border-radius: 1rem;
-        transform: translate(-3%, 170%);
+        transform: translate(0%, 170%);
         background-color: rgb(238, 199, 126);
     }
 
@@ -365,13 +365,17 @@ body{
 
     .container-content{
         height: 85vh;
+        background-color: white;
     }
-
-    .cards{
-        scale: 1;
-    }
-
+    
     .mini-cards {
-        bottom: 2vw}
-        ;
+        width: inherit;
+    }
+
+    .mini-cards p {
+        background-color: #e9d6d6;
+        transform: translate(-24%, -10%);
+        border-radius: 1rem;
+        width: 78vw;
+    }
 }
