@@ -259,7 +259,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 55vw;
+    width: 40vw;
     margin-top: 2vw;
     position: absolute;
     bottom: 15vh;
@@ -268,7 +268,7 @@ body{
 
 .mini-cards p {
     background-color: #e9d6d6;
-    transform: translate(-20%, -10%);
+    transform: translate(-7%, 30%);
     border-radius: 2rem;
     width: 100vw;
 }
@@ -374,7 +374,7 @@ body{
 
     .mini-cards p {
         background-color: #e9d6d6;
-        transform: translate(-24%, -10%);
+        transform: translate(-2%, -10%);
         border-radius: 1rem;
         width: 78vw;
     }
