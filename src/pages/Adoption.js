@@ -43,7 +43,7 @@ function Adoption() {
             <div className="pets-actions">
                 <div className="pets-info">
                     <div className="pets-description">
-                        <div>Mia</div>
+                        <div>Ola, Visitante! Meu nome é Paçoca. Idade: 3 anos. Vacinado: SIM. OBS: Paçoca possui rinite.</div>
                     </div>
                     <Modal closeModal={closeModal} />
                 </div>
