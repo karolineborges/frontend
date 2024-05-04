@@ -27,7 +27,8 @@ body{
     left: 2vw;
     position: absolute;
     transform: translate(02.7%, 0%);
-    margin-top: 3vw;
+    margin-top: 2vw;
+    scale: 0.8;
 }
 
 .cards-container{
@@ -259,7 +260,7 @@ body{
     width: 65vw;
     margin-top: 2vw;
     position: absolute;
-    bottom: 1vw;
+    bottom: 2vw;
     left: 28.6vw;
 }
 
@@ -366,6 +367,11 @@ body{
         height: 100vh;
     }
 
-        .mini-cards {
-            bottom: 2vw};
+    .cards{
+        scale: 1;
+    }
+
+    .mini-cards {
+        bottom: 2vw}
+        ;
 }
