@@ -6,7 +6,7 @@
     margin: 0;
     height: 5vw;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100vh;
     background-color: rgb(248, 240, 240);;
 }
@@ -110,4 +110,33 @@ tr:hover {
 
 .actions-icons svg:hover {
     visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .petList{
+        width: inherit;
+        margin-top: 90vw;
+        scale: 0.9;
+    }
+
+    .actions{
+        display: flex;
+        margin-top: 10vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        overflow: scroll;
+    }
+
+    .adm>div  {
+        margin-top: 3vw;
+    }
+
+    .adm > div button {
+        margin-top: 2vw;
+        background-color: transparent;
+        text-decoration: underline;
+    } 
+
 }

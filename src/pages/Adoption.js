@@ -56,9 +56,9 @@ function Adoption() {
                         </Button>
                     </DialogActions>
                 </Dialog>
-                <div className="mini-cards">
-                    <p>Conhece algum animalzinho que esteja aprecisando de abrigo temporário? Faça o cadastro dele <span onClick={handleOpenModal}>AQUI!</span></p>
-                </div>
+            </div>
+            <div className="mini-cards">
+                <p>Conhece algum animalzinho que esteja aprecisando de abrigo temporário? Faça o cadastro dele <span onClick={handleOpenModal}>AQUI!</span></p>
             </div>
         </div>
     );

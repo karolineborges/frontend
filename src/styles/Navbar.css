@@ -83,6 +83,11 @@
     .menu {
         display: block;
         cursor: pointer;
+        width: 100vw;
+    }
+
+    .menuList svg{
+        scale: 0.5;
     }
 
     .navbar-links {
@@ -97,7 +102,7 @@
     }
 
     .navbar-links.active {
-        margin-top: 2vw;
+        margin-top: 2.5vw;
         width: 100vw;        
     }
 
@@ -113,12 +118,14 @@
     }
 
     .navbar{
-        height: 17vw;
+        height: 14vw;
         width: 100vw;
     }
 
     .logo{
-        transform: translate(-60%, 6%);
+        position: absolute;
+        left: -4vw;
+        font-size: 1.5rem;
     }
 
     .logo img{
@@ -127,6 +134,4 @@
     .container-content{
         height: 180vw;
     }
-
-
 }

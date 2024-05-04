@@ -27,6 +27,12 @@ const sugestion = [
     { name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
     { name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
     { name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+    { name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+    { name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+    { name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+    { name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+    { name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+    { name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
     { name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" }
 ];
 
