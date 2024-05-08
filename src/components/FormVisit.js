@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { scheduleVisit } from "../services/ScheduleService";
 
 function FormVisit(){
+    const [send, setSend] = useState(false);
     const [dataForm, setDataForm] = useState({
         petName: '',
         visitorName: '',
@@ -25,9 +26,12 @@ function FormVisit(){
         event.preventDefault();         
 
         scheduleVisit(dataForm);
+        setSend(true);
     };
 
     return (
+        <>{
+        send === true ? <p>Agendamento realizado com sucesso!</p> :
         <form onSubmit={handleSubmit} className='formVisit'>
             <div>
                 <div>
@@ -63,6 +67,7 @@ function FormVisit(){
                 Agendar
             </Button>
         </form>
+        }</>
     );
 }
 
