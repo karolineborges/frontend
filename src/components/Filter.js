@@ -22,11 +22,7 @@ function Filter({onFilter}){
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log("dataSearch")
-        console.log(dataSearch)
         const pets = searchPets(dataSearch);
-        console.log("pets filter")
-        console.log(pets)
         onFilter(pets);
     }
 

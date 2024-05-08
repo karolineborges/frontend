@@ -15,7 +15,7 @@ function Modal() {
 
     return (
         <div>
-            <Button variant="contained" onClick={handleOpenModal} className="visitButton" style={{
+            <Button variant="contained" onClick={handleOpenModal} className="visit-button" style={{
                 backgroundColor: "#adf0b6", width:"20vw", color: "#7B3F00", borderRadius: "4rem", border: "transparent" }}>
                 Venha me fazer uma visita!
             </Button>

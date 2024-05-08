@@ -22,9 +22,9 @@ function Home(){
         <h3>Pets em destaque</h3>       
         <div className="cards-home">
             <div className="card-home">
-                <img src={cat2} />
+                <img src={cat2} key="petCat" />
             </div>
-            <div className="card-home">
+            <div className="card-home" key="petDog">
                 <img src={dog2}/>
             </div>
         </div>

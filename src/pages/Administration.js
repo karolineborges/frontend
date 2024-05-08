@@ -134,11 +134,11 @@ function Administration(){
                                 <td title={pet.obs}>
                                     <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginTop: "0.33vw", marginLeft: "0.3vw" }}>
 
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                                        <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
 
-                                        <g id="SVGRepo_iconCarrier"> <path d="M7 8H17M7 12H17M9 16H15M4 4H20V20H4V4Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /> </g>
+                                        <g id="SVGRepo_iconCarrier"> <path d="M7 8H17M7 12H17M9 16H15M4 4H20V20H4V4Z" stroke="#000000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /> </g>
 
                                     </svg>
                                 </td>

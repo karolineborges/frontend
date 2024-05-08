@@ -36,13 +36,23 @@
     border-radius: 20px;
 }
 
+.sponsorship .pets-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72vw;
+    height: 10vh;
+    border-radius: 2rem;
+    background-color: rgb(238, 199, 126);
+}
+
 @media (max-width: 768px) {
-    .infos {
+    .donation .infos {
         height: 87vh;
     }
     .image-cat {
         height: inherit;
-        overflow :auto;
+        overflow :hidden;
     }
 
     .image-cat img {

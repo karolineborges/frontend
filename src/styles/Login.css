@@ -83,7 +83,6 @@ body {
     padding-right: 2vw;
     display: flex;
     flex-direction: column;
-    transform: translate(580%);
 }
 
 .login a{
@@ -99,7 +98,7 @@ body {
 
 @media (max-width: 768px) {
     .login{
-        transform: translate(-40%, 90%);
+        margin-top: 0;
     }
 
     .login p{

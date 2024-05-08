@@ -7,7 +7,7 @@ function Donation(){
         <>
             <section className="donation">
                 <div className="image-cat">
-                    <img src={cat}></img>
+                    <img src={cat} key="petCat"></img>
                 </div>
                 <div className="infos">
                     <div style={{ backgroundColor: "#fff" }}>Estatísticas de abandono de animais</div>
