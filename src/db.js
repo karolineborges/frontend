@@ -40,6 +40,7 @@ function addPet(pet){
     let data = JSON.parse(sessionStorage.getItem("data"));
 
     data.push(pet);
+    database.push(pet);
 
     sessionStorage.setItem("data", JSON.stringify(data));
 }
@@ -87,17 +88,36 @@ function addSugestion(id) {
     let pet = sugestions[id];
     let data = JSON.parse(sessionStorage.getItem("aux"));
 
-    console.log("aux do addSugestion pets")
-    console.log(data)
-
     data.push(pet);
 
     sessionStorage.setItem("aux", JSON.stringify(data));
 
-    console.log("aux do addSugestion pets")
-    console.log(data)
-
     removeSugestion(id);
 }
 
-export { database, sugestion, addPet, editPet, deletePet, addSugestion, removeSugestion, addSugestionPet };
+function searchPets(filters){
+    let pets = JSON.parse(sessionStorage.getItem("data"));
+
+    if (filters.castrated === '' && filters.vaccinated === '' && filters.name === '' && filters.type === '' && filters.size === ''){
+        return (pets);
+    }
+
+    if(filters.castrated !== '')
+        pets = pets.filter(obj => obj.castrated === filters.castrated);
+    
+    if (filters.vaccinated !== '')
+        pets = pets.filter(obj => obj.vaccinated === filters.vaccinated);
+    
+    if (filters.name !== '')
+        pets = pets.filter(obj => obj.name.toUpperCase() === filters.name.toUpperCase());
+    
+    if (filters.type !== '')
+        pets = pets.filter(obj => obj.sex === filters.type);
+    
+    if (filters.size !== '')
+        pets = pets.filter(obj => obj.size === filters.size);
+
+    return pets;
+}
+
+export { database, sugestion, addPet, editPet, deletePet, addSugestion, removeSugestion, addSugestionPet, searchPets };
