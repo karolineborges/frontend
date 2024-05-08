@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from '@mui/material';
 import { searchPets } from "../db.js";
+import "../styles/Filter.css"
 
 function Filter({onFilter}){
     const [dataSearch, setDataSearch] = useState({
