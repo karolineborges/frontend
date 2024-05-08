@@ -14,11 +14,24 @@ function EditDeletePet({index, form}){
         castrated: pet.castrated,
         sex: pet.sex,
         id: pet.id,
-        obs: pet.obs
+        obs: pet.obs,
+        photo: ""
     });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+        if (e.target.files) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onloadend = () => {
+                setDataForm(prevState => ({
+                    ...prevState,
+                    image: reader.result,
+                }));
+            };
+        }
+
         setDataForm(prevState => ({
             ...prevState,
             [name]: value
@@ -39,7 +52,7 @@ function EditDeletePet({index, form}){
 
     return (
         <> {
-            method == "editPet" ? 
+            method === "editPet" ? 
             <form onSubmit={handleSubmit} className='formVisit'>
                 <div>
                     <div>
@@ -75,6 +88,10 @@ function EditDeletePet({index, form}){
                     <div>
                         <label htmlFor="obs"> Observação </label>
                         <input type="text" name="obs" value={dataForm.obs} onChange={handleChange} />
+                    </div>
+                    <div>
+                        <label htmlFor="photo"> Foto </label>
+                        <input id="photo" type="file" accept='image/*' name="photo" value={dataForm.photo} onChange={handleChange} />
                     </div>
                 </div>
                 <div className='actionsButtons'>

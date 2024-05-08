@@ -63,6 +63,7 @@ function editPet(pet, id) {
     data[id].obs = pet.obs;
     data[id].vaccinated = pet.vaccinated.toUpperCase();
     data[id].castrated = pet.castrated.toUpperCase();
+    data[id].image = pet.image;
 
     sessionStorage.setItem("data", JSON.stringify(data));
 }
