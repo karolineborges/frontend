@@ -1,5 +1,4 @@
 .container-content {
-    overflow-y: scroll;
     min-height: 100vh;
 }
 
@@ -14,165 +13,26 @@
     color: #7B3F00;
 }
 
+.adoption .pets-home h3{
+    padding-top: 0vw;
+    background-color: rgb(238, 199, 126);
+}
+.adoption .pets-home h2 {
+    color: #7B3F00;
+}
+
+.adoption .pets-home p {
+    margin-bottom: 2vh;
+}
+
 .adoption{
-    overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 89vh;
 }
 
 body{
         background-color: rgb(248, 240, 240);
-}
-
-.cards {
-    width: 100%;
-    background-color: rgb(248, 240, 240);
-    width: 90vw;
-    left: 40vw;
-    scale: 1;
-}
-
-
-
-.cards-container{
-    align-items: center;
-    display: flex;
-    height: 24vw;
-    background-color: rgb(248, 240, 240);
-    scale: 0.9;
-}
-
-.card-item{
-    height: 15vw;
-    opacity: 0;
-    position: absolute;
-    transition: all 0.3s ease-in-out;
-    z-index: 0;
-    border-radius: 15px;
-    background-size: contain;
-    width: 20vw;
-}
-
-.card-item-1{
-    left: 15%;
-    opacity: .4;
-    transform: translateX(-50%);
-}
-
-.card-item-2, .card-item-4{
-    height: 44vh;
-    opacity: 0.8;
-    width: 26vw;
-    z-index: 1;
-}
-
-.card-item-2 {
-    left: 30%;
-    transform: translateX(-50%);
-}
-
-.card-item-3 {
-    height: 53vh;
-    opacity: 1;
-    width: 33vw;
-    z-index: 2;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35);
-}
-
-.card-item-4 {
-    left: 70%;
-    transform: translateX(-50%);
-}
-
-.card-item-5 {
-    left: 85%;
-    opacity: .4;
-    transform: translateX(-50%);
-}
-
-.cards-controls{
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 0;
-    height: 6vh;
-}
-
-.cards-controls button {
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    font-size: 30px;
-    margin: 0 4rem;
-    text-transform: capitalize;
-    z-index: 1;
-}
-
-.cards-controls-button:focus{
-    outline: none;
-}
-
-
-.cards-controls-previous::before{
-    border: solid #aaa5a5;
-    border-width: 0 5px 5px 0;
-    content: "";
-    display: inline-block;
-    height: 5px;
-    left: -30px;
-    padding: 10px;
-    position: absolute;
-    top:45%;
-    transform: rotate(135deg) translateY(-50%);
-    transition: left 0.15s ease-in-out;
-    width: 5px;
-}
-
-.cards-controls-next::before{
-    border: solid #aaa5a5;
-    border-width: 0 5px 5px 0;
-    content: "";
-    display: inline-block;
-    height: 5px;
-    right: -30px;
-    padding: 10px;
-    position: absolute;
-    top: 45% ;
-    transform: rotate(-45deg) translateY(-50%);
-    transition: left 0.15s ease-in-out;
-    width: 5px;
- }
-
-.cards-controls-next:hover::before {
-    right: -40px;
-}
-
-.cards-controls-previous:hover::before {
-    left: -40px;
-}
-
-.cards-nav{
-    bottom: -15px;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    width: 100%;
-}
-
-.cards nav li {
-    background: #ccc;
-    border-radius: 50%;
-    height: 10px;
-    margin: 0 16px;
-    width: 10px;
-}
-
-.cards-nav li.card-item-selected{
-    background: #555;
 }
 
 .overlay {
@@ -242,10 +102,6 @@ body{
     width: 20vw;
 }
 
-.visitButton {
-    transform: translateX(-3.9%);
-}
-
 .pets-info {
     display: flex;
     justify-content: center;
@@ -262,12 +118,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 40vw;
-
-
-
 }
-
-
 
 .mini-cards p {
     background-color: #e9d6d6;
@@ -287,55 +138,25 @@ body{
     align-items: center;
 }
 
+.carousel{
+    margin-top: 3vh;
+}
+
+.pets-info div:nth-child(2){
+    padding-right: 2vh;
+}
+
 @media (max-width: 768px) {
     .adoption {
-        height: 80vh;
         background-color: rgb(248, 240, 240);
     }
 
-    .cards{
-        height:80vh;
-        width: 96vw;
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        margin-top: 3vh;
-        background-color: white;
-        border-radius: 1REm;
+    .adoption .pets-home {
+        height: 12vh;
     }
 
-    .card-item-1 {
-        left: 15%;
-        opacity: .4;
-        transform: translateX(-50%);
-    }
-
-    .card-item-1,
-    .card-item-5,
-    .card-item-2,
-    .card-item-4 {
-        display: none;
-    }
-
-    .card-item-3 {
-        opacity: 1;
-        width: 105vw;
-        scale: 0.75;
-        left: 50%;
-        z-index: 0;
-        box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
-        transform: translate(-66%,0%);
-    }
-
-    .cards-container {
-        height: 48vh;
-        margin: 0;
-        width: inherit;
-        display: flex;
-        scale: 1;
-        background-color: transparent;
-        z-index: 0;
-    }
+    .adoption .pets-home h2{
+        width: 80vw;    }
 
     .pets-info {
         display: flex;
@@ -358,22 +179,6 @@ body{
         padding: 1rem 3rem;
     }
 
-    .cards-controls {
-        width: 100%;
-        position: absolute;
-        top: 20vw;
-    }
-
-    .cards-controls-previous::before {
-        position: absolute;
-        top: -0.3vw;
-    }
-
-    .container-content{
-        height: 85vh;
-        background-color: white;
-    }
-    
     .mini-cards {
         width: 96vw;
         margin-top: 1rem;
