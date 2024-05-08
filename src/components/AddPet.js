@@ -10,15 +10,29 @@ function AddPet({IsSugestion}){
         castrated: '',
         sex: '',
         id: '',
-        obs: ''
+        obs: '',
+        image: '',
     });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+        if (e.target.files)
+        {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onloadend = () => {
+                setDataForm(prevState => ({
+                    ...prevState,
+                    image: reader.result,
+                }));
+            };
+        }
+
         setDataForm(prevState => ({
             ...prevState,
             [name]: value
-        }));
+        }));        
     };
 
     const handleSubmit = (event) => {
