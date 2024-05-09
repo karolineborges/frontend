@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../styles/Navbar.css';
-import logo from "../images/img.png";
+import logo from "../images/logo.jpg";
 import {Link} from "react-router-dom";
 
 function Navbar() {
@@ -20,7 +20,7 @@ function Navbar() {
         <nav className="navbar">
             <div className="container">
             <div className="logo">
-                <Link to="/" ><img src={logo} key="logo"/></Link>                  
+                    <Link to="/" ><img src={logo} style={{borderRadius: "10px"}} key="logo"/></Link>                  
             </div>
             <div className="menu" onClick={handleShowMenu}>
                 <div className="menuList">
