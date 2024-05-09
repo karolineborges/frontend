@@ -16,11 +16,11 @@ function Modal() {
     return (
         <div>
             <Button variant="contained" onClick={handleOpenModal} className="visit-button" style={{
-                backgroundColor: "#adf0b6", width:"20vw", color: "#7B3F00", borderRadius: "4rem", border: "transparent" }}>
+                backgroundColor: "#305573", width:"20vw", color: "#d9e5ed", borderRadius: "4rem", border: "transparent" }}>
                 Venha me fazer uma visita!
             </Button>
             <Dialog open={open} onClose={handleCloseModal}>
-                <DialogTitle style={{ backgroundColor: "#adf0b6", color:  "#7B3F00", fontWeight: "bold"}}> Agendamento da visita</DialogTitle >
+                <DialogTitle style={{ backgroundColor: "#305573", color:  "#d9e5ed", fontWeight: "bold"}}> Agendamento da visita</DialogTitle >
                 <DialogContent style={{ marginTop: "5vw"}}>
                     <DialogContentText>
                         <FormVisit />

@@ -2,8 +2,8 @@
 
 .navbar {
     position: relative;
-    background-color: #adf0b6;
-    color: #7B3F00;
+    background-color: #305573;
+    color: #d9e5ed;
     height: 8vw;
     display: flex;
     width: 100%;
@@ -53,7 +53,7 @@
 .navbar-links ul a {
     font-size: 16px;
     font-weight: bold;    
-    color: #7B3F00;    
+    color: #d9e5ed;    
     text-decoration: none;
 }
 
@@ -115,6 +115,10 @@
 
     .navbar-links ul li {
         margin-right: unset;
+    }
+
+    .navbar-links ul li a{
+        color: #454c41;
     }
 
     .navbar{

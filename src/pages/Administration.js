@@ -69,7 +69,7 @@ function Administration(){
                 </Button>
             </div>
             <Dialog open={open} onClose={handleCloseModal}>
-                <DialogTitle style={{ backgroundColor: "#adf0b6", color: "#7B3F00", fontWeight: "bold" }}> Edição </DialogTitle >
+                <DialogTitle style={{ backgroundColor: "#305573", color: "#454c41", fontWeight: "bold" }}> Edição </DialogTitle >
                 <DialogContent style={{ marginTop: "1vw" }}>
                     <AddPet i /> 
                 </DialogContent>

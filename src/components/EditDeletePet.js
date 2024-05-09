@@ -95,14 +95,14 @@ function EditDeletePet({index, form}){
                     </div>
                 </div>
                 <div className='actionsButtons'>
-                    <Button type="submit" variant="contained" style={{ backgroundColor: 'rgb(238, 199, 126)', color: '#7B3F00', marginTop: "2vw", marginBottom: "1vw" }}>
+                    <Button type="submit" variant="contained" style={{ backgroundColor: '#f9d13b', color: '#454c41', marginTop: "2vw", marginBottom: "1vw" }}>
                         Salvar
                     </Button>
                 </div>
             </form> : 
                 <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                     <p>Tem certeza que deseja remover esse registro?</p>
-                    <Button id={index} type="button" onClick={handleClick} variant="contained" style={{ backgroundColor: 'red', color: '#7B3F00', marginTop: "2vw", marginBottom: "1vw" }}>
+                    <Button id={index} type="button" onClick={handleClick} variant="contained" style={{ backgroundColor: 'red', color: '#454c41', marginTop: "2vw", marginBottom: "1vw" }}>
                         Apagar
                     </Button>
             </div>}

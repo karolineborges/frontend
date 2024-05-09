@@ -63,7 +63,7 @@ function FormVisit(){
                     <input type="datetime-local" name="date" value={dataForm.firstName} onChange={handleChange} required />
                 </div>
             </div>
-            <Button type="submit" variant="contained" style={{ backgroundColor: 'rgb(238, 199, 126)', color: '#7B3F00', marginTop: "2vw", marginBottom: "1vw" }}>
+            <Button type="submit" variant="contained" style={{ backgroundColor: '#f9d13b', color: '#454c41', marginTop: "2vw", marginBottom: "1vw" }}>
                 Agendar
             </Button>
         </form>

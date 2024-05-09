@@ -16,7 +16,7 @@
 
 .login-container h2{
     margin-top: 2vw;
-    color: #7B3F00;
+    color: #454c41;
 }
 
 .login-form {
@@ -24,7 +24,7 @@
     max-width: 400px;
     padding: 2vw;
     margin: 4vw;
-    background-color:rgb(238, 199, 126);
+    background-color:#f9d13b;
     border-radius: 8px;
     width: 300px;
     display: flex;
@@ -43,7 +43,7 @@
     display: block;
     font-weight: bold;
     margin-bottom: 0.8vw;
-    color: #7B3F00;
+    color: #454c41;
 }
 
 .form-group input {
@@ -57,8 +57,8 @@
 .login-form button {
     width: 100%;
     padding: 0.7vw;
-    background-color: #adf0b6;
-    color: #7B3F00;;
+    background-color: #305573;
+    color: #d9e5ed;;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -87,12 +87,12 @@ body {
 
 .login a{
     text-decoration: none;
-    color: #7B3F00;
+    color: #d9e5ed;
 }
 
 .login p{
     font-style: none;
-    background-color: #adf0b6;
+    background-color: #305573;
     padding: 0;
 }
 

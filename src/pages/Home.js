@@ -16,7 +16,7 @@ function Home(){
             <h1>Adote um bichinho</h1>
             <span>Nos ajude a encontrar um novo lar para eles, adote!</span>
             <button>
-                <Link to="/adoption" >Ver pets disponíveis</Link>
+                <Link to="/adoption">Ver pets disponíveis</Link>
             </button>
         </div>
         <h3>Pets em destaque</h3>       

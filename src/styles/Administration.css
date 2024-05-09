@@ -12,7 +12,7 @@
 }
 
 .adm h1{
-    background-color: rgb(238, 199, 126);
+    background-color: #f9d13b;
     width: 100vw;
     height: 20vh;
     padding: 3vw 0;
@@ -21,11 +21,11 @@
 .adm button {
     width: 25vw;
     height: 2vw;
-    background-color: #adf0b6;
+    background-color: #305573;
     border: transparent;
     border-radius: 4rem;
     font-style: none;
-    color: #7B3F00;
+    color: #d9e5ed;
 }
 
 .adm button a {
@@ -66,7 +66,7 @@
     justify-content: space-around;
     align-items: center;
     width: 60vw;
-    background-color: rgb(238, 199, 126);
+    background-color: #f9d13b;
     border-radius: 20px;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .petList{
-    border: solid #adf0b6 1px;
+    border: solid #305573 1px;
     margin-bottom: 10vw;
 }
 
@@ -90,14 +90,14 @@ table {
 
 th,
 td {
-    border: 1px solid #adf0b6;
+    border: 1px solid #305573;
     padding: 10px;
     text-align: left;
 }
 
 th {
-    background-color:#adf0b6;
-    color: #7B3F00;
+    background-color:#305573;
+    color: #d9e5ed;
 }
 
 tr:nth-child(even) {
@@ -137,6 +137,7 @@ tr:hover {
         margin-top: 2vw;
         background-color: transparent;
         text-decoration: underline;
-    } 
+            color: #454c41;
+        }
 
 }

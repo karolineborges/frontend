@@ -68,7 +68,7 @@ function Adoption() {
                     </div>
                     <div className="mini-cards">
                         <Dialog open={open} onClose={handleCloseModal}>
-                            <DialogTitle style={{ backgroundColor: "#adf0b6", color: "#7B3F00", fontWeight: "bold" }}> Sugestão de Pet </DialogTitle >
+                            <DialogTitle style={{ backgroundColor: "#305573", color: "#d9e5ed", fontWeight: "bold" }}> Sugestão de Pet </DialogTitle >
                             <DialogContent style={{ marginTop: "1vw" }}>
                                 <AddPet IsSugestion={true} />
                             </DialogContent>

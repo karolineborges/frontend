@@ -4,8 +4,7 @@
 }
 
 h1, span, h3{
-    color: #7B3F00;
-}
+    color: #454c41;}
 
 h3{
     background-color: rgb(248, 240, 240);
@@ -21,7 +20,7 @@ span{
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-color: rgb(238, 199, 126);
+    background-color: #f9d13b;
     align-items: center;
     justify-content: space-around;
     padding: 2vw 0 1vw 0;
@@ -34,17 +33,17 @@ span{
 .pets-home button{
     width: 25vw;
     height: 5vh;
-    background-color: #adf0b6;
+    background-color: #305573;
     border: transparent ;
     border-radius: 4rem;    
     font-style: none;
-    color: #7B3F00;
+    color: #d9e5ed;
 }
 
 .pets-home button a {
     text-decoration: none;
     font-style: none;
-    color: #7B3F00;
+    color: #d9e5ed;
 }
 
 .cards-home{

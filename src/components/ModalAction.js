@@ -44,7 +44,7 @@ function ModalAction({index}) {
 
             </svg>   
             <Dialog open={open} onClose={handleCloseModal}>
-                <DialogTitle style={{ backgroundColor: "#adf0b6", color: "#7B3F00", fontWeight: "bold" }}> Edição </DialogTitle >
+                <DialogTitle style={{ backgroundColor: "#305573", color: "#d9e5ed", fontWeight: "bold" }}> Edição </DialogTitle >
                     <DialogContent style={{ marginTop: "1vw" }}>
                     {form === "add" ? <AddPet /> : form === "editPet" ? <EditDeletPet index={index} form={form} /> : <EditDeletPet index={index} form={form} />}                        
                     </DialogContent>

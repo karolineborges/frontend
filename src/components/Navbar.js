@@ -50,7 +50,7 @@ function Navbar() {
                     sessionStorage.getItem("ADM") ? "" :
                     <li className='login' onClick={() => { setShowMenu(!showMenu)}}>
                         <Link to="/login" >
-                            <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#7B3F00" strokeWidth="1" strokeLinecap="round" strokeLinejoin="miter">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#d9e5ed" strokeWidth="1" strokeLinecap="round" strokeLinejoin="miter">
 
                                 <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
