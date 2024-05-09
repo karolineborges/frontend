@@ -15,6 +15,7 @@ function EditDeletePet({index, form}){
         sex: pet.sex,
         id: pet.id,
         obs: pet.obs,
+        size: pet.size,
         photo: ""
     });
 
@@ -46,6 +47,7 @@ function EditDeletePet({index, form}){
     };
 
     const handleClick = () => {
+        console.log(index)
         deletePet(index);
         window.location.reload();
     }
@@ -69,6 +71,15 @@ function EditDeletePet({index, form}){
                             <option >Selecione uma opção</option>
                             <option value="FÊMEA">Fêmea</option>
                             <option value="MACHO">Macho</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label htmlFor="size"> Porte </label>
+                        <select onChange={handleChange} name="size" required value={dataForm.size}>
+                            <option >Selecione uma opção</option>
+                            <option value="PEQUENO">PEQUENO</option>
+                            <option value="MÉDIO">MÉDIO</option>
+                            <option value="GRANDE">GRANDE</option>
                         </select>
                     </div>
                     <div>

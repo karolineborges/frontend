@@ -6,10 +6,12 @@ import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/
 import AddPet from "../components/AddPet.js";
 import Carousel from "../components/Carousel.js";
 import Filter from "../components/Filter.js";
-import { searchPets } from "../db.js";
+import { searchPets, database } from "../db.js";
 
 
 function Adoption() {
+    sessionStorage.setItem("data", JSON.stringify(database));
+
     const [,setModalOpen] = useState(false);
     const [open, setOpen] = useState(false);
     const [pets, setPets] = useState(searchPets({

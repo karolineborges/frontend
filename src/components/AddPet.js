@@ -12,6 +12,7 @@ function AddPet({IsSugestion}){
         id: '',
         obs: '',
         image: '',
+        size: ''
     });
 
     const handleChange = (e) => {
@@ -63,6 +64,15 @@ function AddPet({IsSugestion}){
                         <option defaultValue >Selecione uma opção</option>
                         <option value="FÊMEA">Fêmea</option>
                         <option value="MACHO">Macho</option>
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor="size"> Porte </label>
+                    <select onChange={handleChange} name="size" required value={dataForm.size}>
+                        <option >Selecione uma opção</option>
+                        <option value="PEQUENO">Pequeno</option>
+                        <option value="MÉDIO">Médio</option>
+                        <option value="GRANDE">Grande</option>
                     </select>
                 </div>
                 <div>
