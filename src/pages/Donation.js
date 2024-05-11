@@ -1,5 +1,5 @@
 import "../styles/Donation.css"
-import cat from "../images/cat1.jpg"
+import dog from "../images/dog_donation.jpg"
 
 function Donation(){
 
@@ -7,7 +7,7 @@ function Donation(){
         <>
             <section className="donation">
                 <div className="image-cat">
-                    <img src={cat} key="petCat"></img>
+                    <img src={dog} key="petCat"></img>
                 </div>
                 <div className="infos">
                     <div style={{ backgroundColor: "#fff" }}>Estatísticas de abandono de animais</div>
@@ -16,7 +16,6 @@ function Donation(){
                     <div style={{ backgroundColor: "#fff" }}>infomações pix para doação</div>
                 </div>
             </section>
-
         </>
     );
 }

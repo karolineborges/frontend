@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import '../styles/Home.css';
 import '../styles/Login.css';
-import dog2 from "../images/dog2.jpg";
-import cat2 from "../images/cat2.jpg";
+import dog from "../images/dof_home.jpg";
+import cat from "../images/cat_home.png";
 import { database, sugestion } from "../db.js"
 
 function Home(){
@@ -22,10 +22,10 @@ function Home(){
         <h3>Pets em destaque</h3>       
         <div className="cards-home">
             <div className="card-home">
-                <img src={cat2} key="petCat" />
+                <img src={cat} key="petCat" />
             </div>
             <div className="card-home" key="petDog">
-                <img src={dog2}/>
+                <img src={dog}/>
             </div>
         </div>
         </>

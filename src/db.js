@@ -3,37 +3,37 @@ import dog2 from "./images/dog2.jpg";
 import dog3 from "./images/dog3.jpg";
 import cat1 from "./images/cat1.jpg";
 import cat2 from "./images/cat2.jpg";
+import tody from "./images/tody.png";
+import arthur from "./images/arthur.png";
+import flor from "./images/flor.png";
+import trovao from "./images/trovao.png";
+import princesa from "./images/princesa.png";
+import aurora from "./images/aurora.png";
 
 const database = [
-    { size: "PEQUENO", name: "Paçoca", sex: "MACHO", age: "12 meses", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "PEQUENO", name: "Bolinha", sex: "MACHO", age: "6 meses", castrated: "NÃO", image: dog2, vaccinated: "NÃO", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "MÉDIO", name: "Baster", age: "3 anos", sex: "FÊMEA", castrated: "SIM", image: cat1, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" },
-    { size: "PEQUENO", name: "Amora", age: "3 meses", sex: "FÊMEA", castrated: "SIM", image: dog3, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "GRANDE", name: "Dori", age: "9 anos", sex: "FÊMEA", castrated: "NÃO", image: cat2, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" },
-    { size: "MÉDIO", name: "Tela", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "PEQUENO", name: "Mel", age: "6 meses", sex: "FÊMEA", castrated: "NÃO", image: dog2, vaccinated: "NÃO", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "MÉDIO", name: "Max", age: "3 anos", castrated: "SIM", sex: "MACHO", image: cat1, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" },
-    { size: "MÉDIO", name: "Lulu", age: "3 meses", castrated: "SIM", image: dog3, sex: "FÊMEA", vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "PEQUENO", name: "Arthur", age: "9 anos", sex: "MACHO", castrated: "NÃO", image: cat2, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" },
-    { size: "MÉDIO", name: "Totó", age: "12 meses", sex: "MACHO", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "PEQUENO", name: "Pingo", age: "6 meses", sex: "MACHO", castrated: "NÃO", image: dog2, vaccinated: "NÃO", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "GRANDE", name: "Pit", age: "3 anos", sex: "FÊMEA", castrated: "SIM", image: cat1, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" },
-    { size: "GRANDE", name: "Tody", age: "3 meses", sex: "MACHO", castrated: "SIM", image: dog3, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "GRANDE", name: "Fifi", age: "9 anos", sex: "FÊMEA", castrated: "NÃO", image: cat2, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" }
+    { name: "Trovão", species: "CÃO", sex: "MACHO", age: "6 MESES", vaccinated: "SIM", castrated: "SIM", image: trovao, size: "GRANDE", obs: "" },
+    { name: "Tody", species: "CÃO", sex: "MACHO", age: "3 ANOS", vaccinated: "SIM", castrated: "SIM", image: tody, size: "PEQUENO", obs: ""},
+    { name: "Arthur", species: "CÃO", sex: "MACHO", age: "2 ANOS", vaccinated: "SIM", castrated: "SIM", image: arthur, size: "MÉDIO", obs: "" },
+    { name: "Flor", species: "CÃO", sex: "FÊMEA", age: "2 ANOS", vaccinated: "SIM", castrated: "SIM", image: flor, size: "MÉDIO", obs: "" },
+    { name: "Princesa", species: "GATO", sex: "FÊMEA", age: "1 ANO E MEIO", vaccinated: "SIM", castrated: "SIM", image: princesa, size: "MÉDIO", obs: "" },
+    { name: "Aurora", species: "CÃO", sex: "FÊMEA", age: "1 ANO", vaccinated: "SIM", castrated: "SIM", image: aurora, size: "MÉDIO", obs: "" },
 ];
 const sugestion = [
-    { size: "MÉDIO", name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "MÉDIO", name: "Bob", age: "12 meses", sex: "MACHO", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "PEQUENO", name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "PEQUENO", name: "Bob", age: "12 meses", sex: "MACHO", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "MÉDIO", name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "MÉDIO", name: "Bob", age: "12 meses", sex: "MACHO", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "PEQUENO", name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "PEQUENO", name: "Bob", age: "12 meses", sex: "MACHO", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "GRANDE", name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "PEQUENO", name: "Bob", age: "12 meses", sex: "MACHO", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "GRANDE", name: "Flor", age: "12 meses", sex: "FÊMEA", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-    { size: "GRANDE", name: "Bob", age: "12 meses", sex: "MACHO", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" }
+    { size: "PEQUENO", species: "Cão", name: "Paçoca", sex: "MACHO", age: "12 meses", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "" },
+    { size: "PEQUENO", species: "Cão", name: "Bolinha", sex: "MACHO", age: "6 meses", castrated: "NÃO", image: dog2, vaccinated: "NÃO", obs: "" },
+    { size: "MÉDIO", species: "Gato", name: "Baster", age: "3 anos", sex: "FÊMEA", castrated: "SIM", image: cat1, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" },
+    { size: "PEQUENO", species: "Cão", name: "Amora", age: "3 meses", sex: "FÊMEA", castrated: "SIM", image: dog3, vaccinated: "SIM", obs: "" },
+    { size: "GRANDE", species: "Gato", name: "Dori", age: "9 anos", sex: "FÊMEA", castrated: "NÃO", image: cat2, vaccinated: "SIM", obs: "" },
+    { name: "Lili", species: "CÃO", sex: "FÊMEA", age: "6 MESES", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "" },
+    { name: "Lupita", species: "CÃO", sex: "FÊMEA", age: "2 ANOS", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "" },
+    { name: "Frajola", species: "GATO", sex: "MACHO", age: "4 MESES", vaccinated: "SIM", castrated: "NÃO", image: dog1, size: "MÉDIO", obs: "" },
+    { name: "Chocolate", species: "CÃO", sex: "FÊMEA", age: "2 ANOS", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "" },
+    { name: "Aipim", species: "GATO", sex: "MACHO", age: "4 MESES", vaccinated: "SIM", castrated: "NÃO", image: dog1, size: "MÉDIO", obs: "" },
+    { name: "Jujuba", species: "GATO", sex: "MACHO", age: "4 MESES", vaccinated: "SIM", castrated: "NÃO", image: dog1, size: "MÉDIO", obs: "" },
+    { name: "Aurora", species: "CÃO", sex: "FÊMEA", age: "2 ANOS E MEIO", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "" },
+    { name: "Chocolate", species: "CÃO", sex: "MACHO", age: "3 ANOS", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "" },
+    { name: "Tela", species: "CÃO", sex: "FÊMEA", age: "12 meses", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+
 ];
 
 function addPet(pet){
