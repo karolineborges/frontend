@@ -112,6 +112,14 @@ tr:hover {
     visibility: visible;
 }
 
+.photo-table{
+    width: 10vh;
+}
+
+.photo-table:hover {
+    scale: 8;
+}
+
 @media (max-width: 768px) {
     .petList{
         width: inherit;
@@ -139,5 +147,8 @@ tr:hover {
         text-decoration: underline;
             color: #454c41;
         }
-
+        
+    .photo-table:hover{
+        scale: 5;
+    }
 }

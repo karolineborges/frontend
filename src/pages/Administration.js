@@ -12,11 +12,6 @@ function Administration(){
     const [button, setButton] = useState("");
 
     const handleOpenModal = (e) => {
-        let aux = JSON.parse(sessionStorage.getItem("aux"));
-
-        if(aux)
-            sessionStorage.setItem("data", JSON.stringify(aux));
-
         setForm(e.target.id);
         setOpen(true);
     };
@@ -27,11 +22,8 @@ function Administration(){
 
     const handleClick = (e) => {
         setButton(e.target.id);
-        setData(JSON.parse(sessionStorage.getItem("data")));
-        sessionStorage.setItem("aux", JSON.stringify(data));
 
         setData(JSON.parse(sessionStorage.getItem("sugestion")));
-        sessionStorage.setItem("data", JSON.stringify(data));
     }
 
     const handleSugestion = (index, event) => {
@@ -42,29 +34,27 @@ function Administration(){
         } else {
             addSugestion(index);
         }
-        setData(JSON.parse(sessionStorage.getItem("sugestion")));
+        let petsSugestionDB = JSON.parse(sessionStorage.getItem("sugestion"));
+        setData(petsSugestionDB);
     }
 
     const handleList = () => {
-        let aux = JSON.parse(sessionStorage.getItem("aux"));
+        let petsDB = JSON.parse(sessionStorage.getItem("data"));
         setButton("");
-
-        if (aux){
-            setData(aux);
-        }
+        setData(petsDB);
     }
 
     return(
         <div className="adm">
             <h1>Ações de Administrador</h1>
             <div style={{ display: "flex" }}>
-                <Button onClick={handleList} className='buttonClose' style={{ margin: "1vw 6.3vw 0 0", width: "15vw" }}>
+                <Button onClick={handleList} className='buttonClose' style={{ margin: "1vw 6.3vw 0 0" }}>
                     Listar pets
                 </Button>
-                <Button onClick={handleOpenModal} className='buttonClose' style={{ margin: "1vw 6.3vw 0 0", width: "15vw" }}>
+                <Button onClick={handleOpenModal} className='buttonClose' style={{ margin: "1vw 6.3vw 0 0" }}>
                     Adicionar novo pet
                 </Button>
-                <Button id="sugestion" onClick={handleClick} className='buttonClose' style={{ margin: "1vw 0 0 0", width: "15vw" }}>
+                <Button id="sugestion" onClick={handleClick} className='' style={{ margin: "1vw 0 0 0" }}>
                     Verificar sugestões
                 </Button>
             </div>
@@ -89,6 +79,7 @@ function Administration(){
                             <th>Sexo</th>
                             <th>Castrado</th>
                             <th>Vacinado</th>
+                            <th>Foto</th>
                             <th>Ações</th>
                             <th>OBS</th>
                         </tr>
@@ -103,6 +94,7 @@ function Administration(){
                                 <td>{pet.sex}</td>
                                 <td>{pet.castrated}</td> 
                                 <td>{pet.vaccinated}</td>
+                                <td><img className='photo-table' src={pet.image}/></td>
                                 {
                                     button !== "sugestion" ?
                                     <td className="actions-icons">

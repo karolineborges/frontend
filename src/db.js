@@ -19,21 +19,12 @@ const database = [
     { name: "Aurora", species: "CÃO", sex: "FÊMEA", age: "1 ANO", vaccinated: "SIM", castrated: "SIM", image: aurora, size: "MÉDIO", obs: "" },
 ];
 const sugestion = [
-    { size: "PEQUENO", species: "Cão", name: "Paçoca", sex: "MACHO", age: "12 meses", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "" },
-    { size: "PEQUENO", species: "Cão", name: "Bolinha", sex: "MACHO", age: "6 meses", castrated: "NÃO", image: dog2, vaccinated: "NÃO", obs: "" },
-    { size: "MÉDIO", species: "Gato", name: "Baster", age: "3 anos", sex: "FÊMEA", castrated: "SIM", image: cat1, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" },
-    { size: "PEQUENO", species: "Cão", name: "Amora", age: "3 meses", sex: "FÊMEA", castrated: "SIM", image: dog3, vaccinated: "SIM", obs: "" },
-    { size: "GRANDE", species: "Gato", name: "Dori", age: "9 anos", sex: "FÊMEA", castrated: "NÃO", image: cat2, vaccinated: "SIM", obs: "" },
-    { name: "Lili", species: "CÃO", sex: "FÊMEA", age: "6 MESES", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "" },
-    { name: "Lupita", species: "CÃO", sex: "FÊMEA", age: "2 ANOS", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "" },
-    { name: "Frajola", species: "GATO", sex: "MACHO", age: "4 MESES", vaccinated: "SIM", castrated: "NÃO", image: dog1, size: "MÉDIO", obs: "" },
-    { name: "Chocolate", species: "CÃO", sex: "FÊMEA", age: "2 ANOS", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "" },
-    { name: "Aipim", species: "GATO", sex: "MACHO", age: "4 MESES", vaccinated: "SIM", castrated: "NÃO", image: dog1, size: "MÉDIO", obs: "" },
-    { name: "Jujuba", species: "GATO", sex: "MACHO", age: "4 MESES", vaccinated: "SIM", castrated: "NÃO", image: dog1, size: "MÉDIO", obs: "" },
-    { name: "Aurora", species: "CÃO", sex: "FÊMEA", age: "2 ANOS E MEIO", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "" },
-    { name: "Chocolate", species: "CÃO", sex: "MACHO", age: "3 ANOS", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "" },
+    { size: "PEQUENO", species: "CÃO", name: "Paçoca", sex: "MACHO", age: "12 meses", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "" },
+    { size: "PEQUENO", species: "CÃO", name: "Bolinha", sex: "MACHO", age: "6 meses", castrated: "NÃO", image: dog2, vaccinated: "NÃO", obs: "" },
+    { size: "MÉDIO", species: "GATO", name: "Baster", age: "3 anos", sex: "FÊMEA", castrated: "SIM", image: cat1, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" },
+    { size: "PEQUENO", species: "CÃO", name: "Amora", age: "3 meses", sex: "FÊMEA", castrated: "SIM", image: dog3, vaccinated: "SIM", obs: "" },
+    { size: "GRANDE", species: "GATO", name: "Dori", age: "9 anos", sex: "FÊMEA", castrated: "NÃO", image: cat2, vaccinated: "SIM", obs: "" },
     { name: "Tela", species: "CÃO", sex: "FÊMEA", age: "12 meses", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
-
 ];
 
 function addPet(pet){
@@ -51,6 +42,7 @@ function addSugestionPet(pet) {
     data.push(pet);
 
     sessionStorage.setItem("sugestion", JSON.stringify(data));
+    return data;
 }
 
 function editPet(pet, id) {
@@ -65,7 +57,6 @@ function editPet(pet, id) {
     data[id].image = pet.image;
     data[id].size = pet.size;
 
-    database[id].id = id;
     database[id].name = pet.petName.toUpperCase();
     database[id].age = pet.age.toUpperCase();
     database[id].sex = pet.sex.toUpperCase();
@@ -82,6 +73,9 @@ function deletePet(id) {
     let data = JSON.parse(sessionStorage.getItem("data"));
 
     data.splice(id, 1);
+    console.log("data deletePet")
+    console.log(data)
+    database.splice(id, 1);
 
     sessionStorage.setItem("data", JSON.stringify(data));
 }
@@ -91,6 +85,7 @@ function removeSugestion(id){
 
     data.splice(id, 1);
 
+
     sessionStorage.setItem("sugestion", JSON.stringify(data));
 }
 
@@ -98,31 +93,25 @@ function addSugestion(id) {
     let sugestions = JSON.parse(sessionStorage.getItem("sugestion"));
 
     let pet = sugestions[id];
-    let data = JSON.parse(sessionStorage.getItem("aux"));
+    let data = JSON.parse(sessionStorage.getItem("data"));
 
     data.push(pet);
-    database.push(pet);
 
-    sessionStorage.setItem("aux", JSON.stringify(data));
+    sessionStorage.setItem("data", JSON.stringify(data));
 
     removeSugestion(id);
 }
 
 function searchPets(filters){
     let pets = JSON.parse(sessionStorage.getItem("data"));
-    console.log(pets)
-    console.log("database")
-    console.log(database)
+    console.log(filters)
 
-    if (filters.castrated === '' && filters.vaccinated === '' && filters.name === '' && filters.type === '' && filters.size === ''){
+    if (filters.species === '' && filters.name === '' && filters.type === '' && filters.size === ''){
         return (pets);
     }
 
-    if(filters.castrated !== '')
-        pets = pets.filter(obj => obj.castrated === filters.castrated);
-    
-    if (filters.vaccinated !== '')
-        pets = pets.filter(obj => obj.vaccinated === filters.vaccinated);
+    if (filters.species !== '')
+        pets = pets.filter(obj => obj.species === filters.species);
     
     if (filters.name !== '')
         pets = pets.filter(obj => obj.name.toUpperCase() === filters.name.toUpperCase());
@@ -133,6 +122,7 @@ function searchPets(filters){
     if (filters.size !== '')
         pets = pets.filter(obj => obj.size === filters.size);
 
+    console.log("pets")
     return pets;
 }
 

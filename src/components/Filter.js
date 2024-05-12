@@ -6,8 +6,7 @@ import "../styles/Filter.css"
 function Filter({onFilter}){
     const [dataSearch, setDataSearch] = useState({
         name: '',
-        vaccinated: '',
-        castrated: '',
+        species: '',
         size: '',
         type: ''
     });
@@ -45,19 +44,20 @@ function Filter({onFilter}){
                             </select>
                         </div>
                         <div className="filter">
-                            <label htmlFor="vaccinated"> Vacinado </label>
-                            <select onChange={handleChange} name="vaccinated" >
+                        <label htmlFor="species"> Espécie </label>
+                        <select onChange={handleChange} name="species" >
                                 <option defaultValue >Selecione uma opção</option>
-                                <option value="SIM">Sim</option>
-                                <option value="NÃO">Não</option>
+                                <option value="CÃO">CÃO</option>
+                                <option value="GATO">GATO</option>
                             </select>
                         </div>
                         <div className="filter">
-                            <label  htmlFor="castrated"> Castrado </label>
-                            <select id='last' onChange={handleChange} name="castrated" >
+                            <label htmlFor="size"> Porte </label>
+                            <select id='last' onChange={handleChange} name="size" >
                                 <option defaultValue >Selecione uma opção</option>
-                                <option value="SIM">Sim</option>
-                                <option value="NÃO">Não</option>
+                                <option value="PEQUENO">PEQUENO</option>
+                                <option value="MÉDIO">MÉDIO</option>
+                                <option value="GRANDE">GRANDE</option>
                             </select>
                         </div>
                     </div>

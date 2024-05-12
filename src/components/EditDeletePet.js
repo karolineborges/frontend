@@ -16,6 +16,7 @@ function EditDeletePet({index, form}){
         id: pet.id,
         obs: pet.obs,
         size: pet.size,
+        image: pet.image,
         photo: ""
     });
 

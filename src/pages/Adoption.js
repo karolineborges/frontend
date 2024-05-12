@@ -6,18 +6,17 @@ import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/
 import AddPet from "../components/AddPet.js";
 import Carousel from "../components/Carousel.js";
 import Filter from "../components/Filter.js";
-import { searchPets, database } from "../db.js";
+import { searchPets } from "../db.js";
 
 
 function Adoption() {
-    sessionStorage.setItem("data", JSON.stringify(database));
+    sessionStorage.getItem("data");
 
     const [,setModalOpen] = useState(false);
     const [open, setOpen] = useState(false);
     const [pets, setPets] = useState(searchPets({
         name: '',
-        vaccinated: '',
-        castrated: '',
+        species: '',
         size: '',
         type: ''
     }));
@@ -27,11 +26,6 @@ function Adoption() {
     };
 
     const handleOpenModal = (e) => {
-        let aux = JSON.parse(sessionStorage.getItem("aux"));
-
-        if (aux)
-            sessionStorage.setItem("data", JSON.stringify(aux));
-
         setOpen(true);
     };
 
