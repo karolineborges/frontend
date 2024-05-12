@@ -16,7 +16,7 @@ function Adoption() {
     const [open, setOpen] = useState(false);
     const [pets, setPets] = useState(searchPets({
         name: '',
-        species: '',
+        specie: '',
         size: '',
         type: ''
     }));

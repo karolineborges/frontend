@@ -11,20 +11,20 @@ import princesa from "./images/princesa.png";
 import aurora from "./images/aurora.png";
 
 const database = [
-    { name: "Trovão", species: "CÃO", sex: "MACHO", age: "6 MESES", vaccinated: "SIM", castrated: "SIM", image: trovao, size: "GRANDE", obs: "" },
-    { name: "Tody", species: "CÃO", sex: "MACHO", age: "3 ANOS", vaccinated: "SIM", castrated: "SIM", image: tody, size: "PEQUENO", obs: ""},
-    { name: "Arthur", species: "CÃO", sex: "MACHO", age: "2 ANOS", vaccinated: "SIM", castrated: "SIM", image: arthur, size: "MÉDIO", obs: "" },
-    { name: "Flor", species: "CÃO", sex: "FÊMEA", age: "2 ANOS", vaccinated: "SIM", castrated: "SIM", image: flor, size: "MÉDIO", obs: "" },
-    { name: "Princesa", species: "GATO", sex: "FÊMEA", age: "1 ANO E MEIO", vaccinated: "SIM", castrated: "SIM", image: princesa, size: "MÉDIO", obs: "" },
-    { name: "Aurora", species: "CÃO", sex: "FÊMEA", age: "1 ANO", vaccinated: "SIM", castrated: "SIM", image: aurora, size: "MÉDIO", obs: "" },
+    { name: "Trovão", specie: "CÃO", sex: "MACHO", age: "6 MESES", vaccinated: "SIM", castrated: "SIM", image: trovao, size: "GRANDE", obs: "" },
+    { name: "Tody", specie: "CÃO", sex: "MACHO", age: "3 ANOS", vaccinated: "SIM", castrated: "SIM", image: tody, size: "PEQUENO", obs: ""},
+    { name: "Arthur", specie: "CÃO", sex: "MACHO", age: "2 ANOS", vaccinated: "SIM", castrated: "SIM", image: arthur, size: "MÉDIO", obs: "" },
+    { name: "Flor", specie: "CÃO", sex: "FÊMEA", age: "2 ANOS", vaccinated: "SIM", castrated: "SIM", image: flor, size: "MÉDIO", obs: "" },
+    { name: "Princesa", specie: "GATO", sex: "FÊMEA", age: "1 ANO E MEIO", vaccinated: "SIM", castrated: "SIM", image: princesa, size: "MÉDIO", obs: "" },
+    { name: "Aurora", specie: "CÃO", sex: "FÊMEA", age: "1 ANO", vaccinated: "SIM", castrated: "SIM", image: aurora, size: "MÉDIO", obs: "" },
 ];
 const sugestion = [
-    { size: "PEQUENO", species: "CÃO", name: "Paçoca", sex: "MACHO", age: "12 meses", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "" },
-    { size: "PEQUENO", species: "CÃO", name: "Bolinha", sex: "MACHO", age: "6 meses", castrated: "NÃO", image: dog2, vaccinated: "NÃO", obs: "" },
-    { size: "MÉDIO", species: "GATO", name: "Baster", age: "3 anos", sex: "FÊMEA", castrated: "SIM", image: cat1, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" },
-    { size: "PEQUENO", species: "CÃO", name: "Amora", age: "3 meses", sex: "FÊMEA", castrated: "SIM", image: dog3, vaccinated: "SIM", obs: "" },
-    { size: "GRANDE", species: "GATO", name: "Dori", age: "9 anos", sex: "FÊMEA", castrated: "NÃO", image: cat2, vaccinated: "SIM", obs: "" },
-    { name: "Tela", species: "CÃO", sex: "FÊMEA", age: "12 meses", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
+    { size: "PEQUENO", specie: "CÃO", name: "Paçoca", sex: "MACHO", age: "12 meses", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "" },
+    { size: "PEQUENO", specie: "CÃO", name: "Bolinha", sex: "MACHO", age: "6 meses", castrated: "NÃO", image: dog2, vaccinated: "NÃO", obs: "" },
+    { size: "MÉDIO", specie: "GATO", name: "Baster", age: "3 anos", sex: "FÊMEA", castrated: "SIM", image: cat1, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" },
+    { size: "PEQUENO", specie: "CÃO", name: "Amora", age: "3 meses", sex: "FÊMEA", castrated: "SIM", image: dog3, vaccinated: "SIM", obs: "" },
+    { size: "GRANDE", specie: "GATO", name: "Dori", age: "9 anos", sex: "FÊMEA", castrated: "NÃO", image: cat2, vaccinated: "SIM", obs: "" },
+    { name: "Tela", specie: "CÃO", sex: "FÊMEA", age: "12 meses", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },
 ];
 
 function addPet(pet){
@@ -106,12 +106,12 @@ function searchPets(filters){
     let pets = JSON.parse(sessionStorage.getItem("data"));
     console.log(filters)
 
-    if (filters.species === '' && filters.name === '' && filters.type === '' && filters.size === ''){
+    if (filters.specie === '' && filters.name === '' && filters.type === '' && filters.size === ''){
         return (pets);
     }
 
-    if (filters.species !== '')
-        pets = pets.filter(obj => obj.species === filters.species);
+    if (filters.specie !== '')
+        pets = pets.filter(obj => obj.specie === filters.specie);
     
     if (filters.name !== '')
         pets = pets.filter(obj => obj.name.toUpperCase() === filters.name.toUpperCase());

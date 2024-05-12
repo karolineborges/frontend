@@ -93,7 +93,7 @@ function Administration(){
                                 <td>{index+1}</td>
                                 <td>{pet.name}</td>
                                 <td>{pet.age}</td>
-                                <td>{pet.species}</td>
+                                <td>{pet.specie}</td>
                                 <td>{pet.sex}</td>
                                 <td>{pet.castrated}</td> 
                                 <td>{pet.vaccinated}</td>

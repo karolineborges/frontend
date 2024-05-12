@@ -6,7 +6,7 @@ import "../styles/Filter.css"
 function Filter({onFilter}){
     const [dataSearch, setDataSearch] = useState({
         name: '',
-        species: '',
+        specie: '',
         size: '',
         type: ''
     });
@@ -44,8 +44,8 @@ function Filter({onFilter}){
                             </select>
                         </div>
                         <div className="filter">
-                        <label htmlFor="species"> Espécie </label>
-                        <select onChange={handleChange} name="species" >
+                        <label htmlFor="specie"> Espécie </label>
+                        <select onChange={handleChange} name="specie" >
                                 <option defaultValue >Selecione uma opção</option>
                                 <option value="CÃO">CÃO</option>
                                 <option value="GATO">GATO</option>
