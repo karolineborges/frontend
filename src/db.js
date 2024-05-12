@@ -21,7 +21,7 @@ const database = [
 const sugestion = [
     { size: "PEQUENO", specie: "CÃO", name: "Paçoca", sex: "MACHO", age: "12 meses", castrated: "SIM", image: dog1, vaccinated: "SIM", obs: "" },
     { size: "PEQUENO", specie: "CÃO", name: "Bolinha", sex: "MACHO", age: "6 meses", castrated: "NÃO", image: dog2, vaccinated: "NÃO", obs: "" },
-    { size: "MÉDIO", specie: "GATO", name: "Baster", age: "3 anos", sex: "FÊMEA", castrated: "SIM", image: cat1, vaccinated: "SIM", obs: "Bily nasceu sem a orelha esquerda" },
+    { size: "MÉDIO", specie: "GATO", name: "Baster", age: "3 anos", sex: "FÊMEA", castrated: "SIM", image: cat1, vaccinated: "SIM", obs: "Possui rinite." },
     { size: "PEQUENO", specie: "CÃO", name: "Amora", age: "3 meses", sex: "FÊMEA", castrated: "SIM", image: dog3, vaccinated: "SIM", obs: "" },
     { size: "GRANDE", specie: "GATO", name: "Dori", age: "9 anos", sex: "FÊMEA", castrated: "NÃO", image: cat2, vaccinated: "SIM", obs: "" },
     { name: "Tela", specie: "CÃO", sex: "FÊMEA", age: "12 meses", vaccinated: "SIM", castrated: "SIM", image: dog1, size: "MÉDIO", obs: "Devido uma infecção que teve nos olhos, Bob realizou uma cirugia nos olhos" },

@@ -73,7 +73,7 @@ function Administration(){
                 <table className="petList">
                     <thead>
                         <tr>
-                            <th>Número de Registro</th>
+                            <th></th>
                             <th>Nome</th>
                             <th>Idade</th>
                             <th>Espécie</th>

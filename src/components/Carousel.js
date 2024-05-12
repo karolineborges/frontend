@@ -35,15 +35,14 @@ function Carousel({ pets, children }){
     const getDescription = () => {
         if(pets.length > 0)
         {
-            document.querySelector(".pets-description").innerHTML = `Ola, Visitante! Meu nome é ${pet.name.toUpperCase()}. Idade: ${pet.age}. Vacinado: ${pet.vaccinated}. OBS: ${pet.obs}`;
+            document.querySelector(".pets-description").innerHTML = `Olá, Visitante! Meu nome é ${pet.name.toUpperCase()}. Espécie: ${pet.specie}. Sexo: ${pet.sex}. Idade: ${pet.age}. Porte: ${pet.size} Vacinado(a): ${pet.vaccinated}. Castrado(a): ${pet.castrated}. ${pet.obs == "" ? "" : `OBS: ${pet.obs}`}`;
         }
     }
 
     useEffect(() => {
         setLength(children.length);
         pet = pets[0];
-        document.querySelector(".pets-description").innerHTML = `Ola, Visitante! Meu nome é ${pet.name.toUpperCase()}. Idade: ${pet.age}. Vacinado: ${pet.vaccinated}. OBS: ${pet.obs}`;
-
+        document.querySelector(".pets-description").innerHTML = `Olá, Visitante! Meu nome é ${pet.name.toUpperCase()}. Espécie: ${pet.specie}. Sexo: ${pet.sex}. Idade: ${pet.age}. Porte: ${pet.size} Vacinado(a): ${pet.vaccinated}. Castrado(a): ${pet.castrated}. ${pet.obs == "" ? "" : `OBS: ${pet.obs}`}`;
     }, [children]);
 
     return (
