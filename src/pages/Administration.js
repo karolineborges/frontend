@@ -77,8 +77,10 @@ function Administration(){
                             <th>Nome</th>
                             <th>Idade</th>
                             <th>Sexo</th>
+                            <th>Espécie</th>
                             <th>Castrado</th>
                             <th>Vacinado</th>
+                            <th>Porte</th>
                             <th>Foto</th>
                             <th>Ações</th>
                             <th>OBS</th>
@@ -91,9 +93,11 @@ function Administration(){
                                 <td>{index+1}</td>
                                 <td>{pet.name}</td>
                                 <td>{pet.age}</td>
+                                <td>{pet.species}</td>
                                 <td>{pet.sex}</td>
                                 <td>{pet.castrated}</td> 
                                 <td>{pet.vaccinated}</td>
+                                <td>{pet.size}</td>
                                 <td><img className='photo-table' src={pet.image}/></td>
                                 {
                                     button !== "sugestion" ?
