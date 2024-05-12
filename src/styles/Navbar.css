@@ -37,13 +37,20 @@
     flex-grow: 1;
     text-align: center;
     width: 50%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .navbar-links ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    padding-right: 7vw;
+}
+
+.navbar-links ul p {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .navbar-links ul li {
@@ -76,7 +83,7 @@
     justify-content: end;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1010px) {
     .navbar-links ul li {
         margin: 1rem 50px 0 0;
     }
@@ -99,6 +106,7 @@
         height: calc(100vh - 60px);
         transition: all 0.3s ease-in;
         overflow: hidden;
+        display: block;
     }
 
     .navbar-links.active {
@@ -134,5 +142,16 @@
 
     .logo img{
         scale: 0.6;
+    }
+
+    .navbar-links ul p {
+        font-size: 16px;
+        font-weight: bold;
+        color: #454c41;
+        text-decoration: none;
+    }
+
+    .navbar-links ul svg {
+        display: none;
     }
 }
