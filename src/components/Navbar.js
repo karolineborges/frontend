@@ -20,7 +20,7 @@ function Navbar() {
         <nav className="navbar">
             <div className="container">
             <div className="logo">
-                    <Link to="/" ><img src={logo} style={{borderRadius: "10px"}} key="logo"/></Link>                  
+                    <Link to="/" onClick={() => setShowMenu(false)}><img src={logo} style={{borderRadius: "10px"}} key="logo"/></Link>                  
             </div>
             <div className="menu" onClick={handleShowMenu}>
                 <div className="menuList">
