@@ -76,8 +76,8 @@ function Administration(){
                             <th>Número de Registro</th>
                             <th>Nome</th>
                             <th>Idade</th>
-                            <th>Sexo</th>
                             <th>Espécie</th>
+                            <th>Sexo</th>
                             <th>Castrado</th>
                             <th>Vacinado</th>
                             <th>Porte</th>
